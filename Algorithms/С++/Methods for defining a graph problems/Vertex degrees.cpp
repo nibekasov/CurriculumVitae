@@ -23,7 +23,7 @@ int main()
             }
         }
         cout << c << endl;
-        c=0;
+        c = 0;
     }
 
 }
