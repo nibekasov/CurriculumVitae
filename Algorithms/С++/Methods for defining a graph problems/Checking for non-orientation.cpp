@@ -1,4 +1,4 @@
-#For a given square n × n matrix of zeros and ones, determine whether this matrix can be the adjacency matrix of a simple undirected graph.
+//For a given square n × n matrix of zeros and ones, determine whether this matrix can be the adjacency matrix of a simple undirected graph.
 
 #include<iostream>
 using namespace std;
