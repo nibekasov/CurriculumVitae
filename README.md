@@ -1,5 +1,5 @@
 # CurriculumVitae
-My resume(outdated now) & solution of algorithmic problems
+My resume & solution of algorithmic problems
 
 Other projects could be found at other folders 
 Some certificates are also inculded
