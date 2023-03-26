@@ -1,0 +1,660 @@
+%!TEX TS-program = xelatex
+\documentclass[12pt, a4paper, oneside]{article}
+
+%%%%%%%%%% Внешний вид страницы %%%%%%%%%%
+
+\usepackage[paper=a4paper, top=20mm, bottom=15mm,left=20mm,right=15mm]{geometry}
+\usepackage{indentfirst}    % установка отступа в первом абзаце главы
+
+\usepackage{setspace}
+\setstretch{1.15}  % межстрочный интервал
+\setlength{\parskip}{4mm}   % Расстояние между абзацами
+% Разные длины в LaTeX: https://en.wikibooks.org/wiki/LaTeX/Lengths
+
+% свешиваем пунктуацию
+% теперь знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее
+\usepackage{microtype}
+
+% \flushbottom                            % Эта команда заставляет LaTeX чуть растягивать строки, чтобы получить идеально прямоугольную страницу
+\righthyphenmin=2                       % Разрешение переноса двух и более символов
+\widowpenalty=300                     % Небольшое наказание за вдовствующую строку (одна строка абзаца на этой странице, остальное --- на следующей)
+\clubpenalty=3000                     % Приличное наказание за сиротствующую строку (омерзительно висящая одинокая строка в начале страницы)
+\tolerance=10000     % Ещё какое-то наказание.
+\usepackage[english, russian]{babel} % выбор языка для документа
+
+% меняю оформление секций 
+\usepackage{titlesec}
+\usepackage{sectsty}
+
+% выбрасываю нумерацию страниц и колонтитулы 
+\pagestyle{empty}
+
+% синие круглые бульпоинты в списках itemize 
+\usepackage{enumitem}
+
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+
+\usepackage{listings}
+% для кода 
+\documentclass[working]{article}
+\begin{document}
+\section{First lesson}
+\subsection{Introduction to Data Analytics: What is Data analytics}
+\subsubsection{Data Science \& Data Analytics}
+Product ownership - important to  if you are middle analyst   
+
+ML: Data -> Algorithm -> Prediction 
+
+Unsupervised Learning:
+Include only one stage 
+
+Supervised Learning:
+
+Model (Trainable parameters)
+With comparing results with prediction 
+Model(Fixed parameters) 
+Comparing results -> Effectiveness of model 
+
+Data for training and testing:
+
+Hits: 
+* Never mess up data from Train and Test data
+* Train and test should have the same distribution
+
+One of example is number recognition 
+where Train data shouldn't be clear (e.g white on black background) and traain is messed up 
+
+Algorithms:
+1. Linear algotihms
+2. Non-linear models
+
+e.t.c.
+
+Data Analytics is collection, transformation, and organisation of data
+
+Data -> Mining -> Conclusions & Monitoring 
+
+Tables, images, audio recording -> A/B split, data exploration -> Recommendations, predictions, dashboards
+
+
+Instruments: 
+1. Ide
+* PyCharm 
+* VSCode
+* Jupyter
+2. BI
+* Tableau
+* Redash
+* Superset
+* Power BI 
+* e.t.c Plotly/ Dash/ Yandex DataLens
+3. Knowledge
+* Domain knowledge
+* Product metrics
+* SQL
+* Python
+* A/B split mechanics and statiscical test
+* Classical ML
+* Causal inference
+* Excel 
+
+
+Q&A:
+Q: What is product ownership 
+1. How to deepen Domain knowledge
+2. Ideas to develop product 
+3. Importans for domain knowledge 
+
+A: 
+Make your own decision
+E.g all decisions came from analysts. If You lead you are also some kind of product owner 
+
+1 and 2. Read what happens in industry Medium, Habr
+Approach - effective process adhoch - 10-20 percent and 80 percent is new ml, da prosucts and live time for fantasy 
+
+Feynman method - from childish ideas to something else 
+
+Books: Insired table book for prosuct owner
+Вы, конечно, шутите, Мистер Фейман
+
+You need to tell, that you are building to improve your process. Add grouming - you need to think what problems your are taking - you need to leave placce for 
+
+Good solution: Ask why you need that task: from one to five - better to prioritise 
+
+Habr: Anton - delivery club, how to work with incoming tasks 
+
+3. DS take part in both DA and ML part - he needs to know knowledge in  if he is not MLE or something like that  
+
+
+
+
+Q Diff-to-diff:
+
+
+A
+Functionality that will help users get business value. 
+Go it to prod faster, but A/B test should went 2 month - you can't use your functionality on all users. 
+Make it on all product - all users, and than tell if It valuable or not after  
+some period. Note that you shouldn't use it if you didn't get reed of seasonality 
+
+Q ML minimum values in train 
+
+A Empirically, but 0,8 on 0,2 and 0,7 on 0,3
+Minimum is necessary, but more importantly it schooled represent general population if it classical ML. 
+For NN use million objects
+
+Q How to test importans of task 
+
+A
+RICE and ICE is good for prioritisation 
+
+A leap of faith - 20 percent of 
+
+Marti Cagan - inspired : Go from problem, but some problems isn't possible to estimate - just minimise that amount of problems 
+
+\subsubsection{More about DA}
+
+
+Speaker Anton Kerselyan:
+MSU graduate 2016
+2020 - Yandex Market - developing emerging 
+
+
+Prior to Yandex thouth that analyst is someone who knows SQL and Python likes to poke around in data
+
+1. Analysts is combunation of business and mathematics 
+2. Competencesis
+3. Business roles
+
+
+In IT analytics is head nad hands of business, 
+Support to business 
+Yandex for example: 
+Main analytical roles is:
+1. Business Analyst
+* Kind of business man
+* Kind of good technical specialist:
+    1. What SKU to use now
+    2. Effectivness
+
+2. Product Analyst
+* A/B Test
+* How to improve product 
+
+What is analyst:
+Strategy:
+Metrics: You could compose metrics or just live 10 metrics(top metrics for users) 
+Data:
+Hypothesis(more product role)
+Dashboards
+
+What is needed:
+
+
+Solid knowledge of math(especially statistics) 
+Technically enthusiasm
+Business thinking
+An ability to  ask Why
+Experience 
+
+Intern is someone with good math and technical skills
+Middle is something how generate aa lot of impact
+Senior is something how give advises to CEO
+
+Team lead: Generate analytical projects - need more ideas to make more 
+Head of some analytics( CDO) 
+
+Example: Top 100
+
+Why? For Dark Store assortiment 
+You improve metrics
+
+Example:: Figure out optimal delivery radius 
+
+Example: Manager come in and ask you to  evaluate effects of a new criteria ( if the phone is a second-hand one) on rate of the customers return to the service 
+
+You understand that people change phones once a year or less, and you also see that the volume of use of the new criteria is quite low.
+
+
+Example:
+You find in data that some problem is accrued in user experience 
+
+
+Q & A
+
+Q Operaation analytics:
+
+A: Logistics analyst 
+
+You need have math base and useful to know about modeling 
+
+
+QA What about modeling: 
+
+A 
+Additional modeling of geo traveling between 
+\subsection{Kick-off Meeting}
+
+Team:
+Ruslan 
+Andrey 
+
+Coordinators:
+Konstantin
+
+2 girls
+
+Overvie
+
+Results
+
+Educational Program Overview
+
+Communication
+
+\subsubsection{Educational Model}
+
+Every Sunday  - 4 hours
+
+Mostly Lectures
+Speakers
+Home tasks
+Case Studies 
+
+Lecturers: Industrial experts
+
+
+
+
+\subsection{Inroduction to Data Analytic: A day in life of a data analyst}
+
+Problem: Sales is down
+Hint: Prices is lover for concurrent 
+
+
+Tree metrics to find hypothesis 
+
+Data isn't available - go to external data  warehouse( e.g like marketing complainers e.t.c)  
+
+
+
+What could be the taasks:
+* Ad hoc data request
+* Reporting
+* Analytical 
+Organize business process
+* Researches
+* Optimization
+Who to interact with:
+* Business customers
+* DWH
+* DB operation team
+* ML commands, parsing, other analytical commands
+* Owners of internal services 
+
+Q&A:
+Q: How to prioritise
+A: Criteria how to prioritise(time, impact on business(money, clients), how it important )
+Q: Analytical infastructure 50-70 to analitical infastructure
+30 - to ad hock 
+Or criteria why we make this task - for analytical infrastructure 
+Q: Inner data creating or external
+A: If quick to criterias( how much money is needed or how many time is needed) 
+Estimate human hours - 
+
+if it one time( external) or regularly
+
+Q: Startup
+A: Top down core auditory, marginality
+We can use metrics in that field 
+If it new idea
+
+If 
+
+Q: How to developen mvp view
+
+A:
+Make managers develop MVP view 
+
+Ask what is needed 
+\subsection{Key Metrics and Analysis: Product & Marketing}
+
+A few words about the lecturer 
+
+Education: Bauman BE Biomedical/Medical Engeneering
+
+Palta, Senior Data Analyst, 2022 - now ( current)  
+Yandex, Data Analyst 2019 - 2022
+
+Metrics are a projection of values, of what's important, and numerically represented 
+
+Commercial information about comapany:
+Capitalization
+Revenue
+Profit
+Growth rate
+
+Government - for the life level of their citizens ( Why not liberty or something)
+Tv shows - using ratings
+Family cars - for reliability
+Sports Cars - for speed and how cool you would look in it 
+
+The same structures would act differently depending on what metrics is used 
+* if scientist amount of researches
+* amount of citations
+* Hirch index (max amount of research with citation 
+
+1. Masimise quantity minimise quality
+2. Maximise quality minimise quantity - only looking for hype, for cornerstine
+3. Perfect balance 
+
+
+
+* Industry the students chose
+* How support works
+* The metric we designed 
+
+
+Ground rule to design a metrics:
+
+*Physical - physical process or object feature 
+*Secure to the fraud 
+*It schould be obvious in which way this metric should be changed in order for things to get better 
+
+Other important ideas 
+
+*When developing the system of metrics it is importaant to cver all major departments with minimum intersection between the metrics
+* Metrics eqal teams KPIs, so design them with care
+* The validity of the data used to calculate metrics schould be the major subject of your attention 
+
+
+How to structure metrics
+
+Metrics' tree
+* Allows you to 
+
+Customer journey - flowchart
+* User is in the center of everything
+* Works best in prosuct-based (or marketing-based) companies luke mobile maps 
+
+
+Ecomerce example
+
+Revenue - cost Where cost is another instance
+
+ARPU - average revenue per user 
+
+Flow of purchase 
+AOV - average order value 
+
+User Retention - production and 
+User Acquisition - marketing 
+Q&A:
+Q: 
+
+Government - for the life level of their citizens ( Why not liberty or something)
+
+Q:How to create new ,metrics
+
+A: We need set of metrics - can count only money in and money out
+1. Look on what company do
+CJM, Costs and instances if we have crosses we need to dissolve it 
+ It's more complicate to understand if metrics is usefull for business than to create it 
+ Minimise am out of crosses and company, costs and metrics  is covered by metrics
+
+ A: 
+ There is no real understanding of what especially this role means - it's differ from company to company
+
+ Q: Market research  - ьгдешзду multiple source
+
+\section{Second lesson}
+
+\subsection{Presvvriptive}
+
+Speaker Ivan Kornev
+
+
+\begin{lstlisting}
+profile = ProfileReport(df, title = "Pandas Profiling Reprot")
+profile.to_file("output.html")
+\end{lstlisting}
+
+
+
+ Interactions - statictics about intersactions 
+
+ Using densiti for that 
+
+ for example dancebility and energy have some kind of correleation 
+
+
+And heatmap
+
+ And missing values 
+
+ Q What is cardinality 
+
+ High cordinality - lots of unique values 
+
+ Alerts is useful to see if imbalance is occur ed, what distribution it could have(for example uniform) 
+
+ It's not analytics it's use-full instrument to understand what data we have 
+
+
+ What else can you Encounter in Raw Data:
+ Gaps: For example missed city 
+ Outliers: CartAdd for example lots of A2C. Could be bot of rival
+ Incorrect entries: for example "7 млн" not 7 000 000 
+
+ Main functions of Data Aggregation
+
+ Sum
+ Average
+ Quantity
+
+ Aggregation of aggregation data 
+
+ Sensitivity of data is not a problem if you work in huge company 50+ analysts 
+
+
+ Q How to make analyticall decision  
+
+ Economic effectiveness 
+
+ Send something via TG(e.g TG bot)
+- opportunity to loss data (P)
+- and how much data is cost (v)
+
+P*V
+Own server in company 
+Cost to develop own infrastructure (C)
+
+
+How to get a job - go on internship
+Write about knowledge about analytical instruments 
+Studential projects 
+\subsection{Key-metrics}
+know your user like you know yourself 
+
+Client is key for success for company 
+
+Ads in searcher(SEO), influencers, banners, CEO 
+Budget -> Money we spent -> ad network 
+
+Typical marketing funnel
+Impression(first interaction ( unique users that see or views) -> click -> (Web-Landing -> Website) or (app-store -> Installation) 
+
+Cost per installation (CPI) 
+Cost per action (CPA)
+We want returning purchase and again, and again, and again 
+
+Lots of intermediate steps to make purchasee(e.g Basket -> Delivery -> Check Out) 
+
+Another example: 
+Subscription-based application 
+
+Customer jorney map 
+
+UE(user engagement) -proxi metrics for hour revenue type 
+
+
+Cash gap
+
+
+Retargeting 
+
+ROAS = Return on ad spend = Expected Revenue / Maeketing Spend 
+
+Resume and lists of metrics
+Impressions - Ad view
+Clicks - ad clicks
+CTR - conversion from view ro click
+CPI/CPL
+CPA
+ROAS(ROI) - our ability t earn back the money spent on ads
+
+lead - when user come to syte
+
+Share of organic traffic anong the new users
+Retarrgeting - our ability to bring back people who churned sometime in the past
+Non-direct advertising - TV, YT, offline-services 
+
+
+Duolingo maximised DAU, but DAU have connection with Revenue 
+
+Look on marketing mix modeling how to model marketing channels 
+(organic user went from something not just from nothing)
+
+
+Product 
+
+Conversion
+* multiple target actions
+Retention
+* it often makes sense to calculate retention to target action 
+
+Product analytics is built from the target events
+
+Cohort-based analysis
+
+\subsection{Process of communication }
+
+\subsubsection{Introduction}
+CE) -> CTO/CPO/CMO/CDO
+CTO-> Backend(+Frontend) + DevOps, SysOps, CyberSec, QA
+CPO -> Products, Projects
+CMO -> Design, Marketing
+CDO -> DWH, BI, DS 
+
+DWH iss parental fro Data quality Engenier, Data engenier, sistem data analysts, data ops, ml ops 
+
+DS(for yahoo) -> Search engine, Surge Pricing, Recommendations, AdTech 
+Search Engine -> DS,DA,ML( x2 each bouth seniors) 
+Booz factor(some on vacation or something)
+Баз фактор 
+
+Ds tasks managment
+Report about your work 
+
+Task management - jira, trello, asana, notion, yandex tracker 
+
+Scrum, Kanban, Waterfall, SAFe 
+
+Scrum - we have sprint to make solution 
+
+Scaled agile framework 
+
+\subsubsection{Company structure}
+\subsubsection{}
+\subsubsection{}
+
+\section{Third lesson}
+
+Dashboard is needed to create data that is readable for final users
+
+Develop analytical decisions (grafana, Power BI), web servers(monitoring promo activities)
+
+In the beginig time you need is multiplied by 5
+
+
+Dashboard is combination of graphs,tables and so on, name viz
+
+DataSets is needed to make viz. To create viz aggregation( is commonly used)
+
+\subsubsection{Useful types of viz}
+Factoid 
+Lines
+Tabled(useful for operations e.g what products isn't bought)
+Bar-charts
+Areas
+Staked areas(Time distribution) 
+
+\subsection{PowerBI practice}
+
+Data importing
+CSV, Excel, DB, Internet, JSON
+
+
+ Mini Homework 
+data https://www.mavenanalytics.io/data-playground
+In power bi to graphs - table with company
+What is more experienced(time spend in space)
+Select top 5 companies
+
+Second
+Years with most amount of successful  expeditions
+Столбчатая диаграмма
+
+\subsection{Financial metrics}
+Metlov Dmitry
+
+
+Financial Metrics and Analysis 
+For reporting and reports
+
+Management vs Financial Reporting
+
+Top-line metric structure
+Revenue - costs = profit
+
+Revenue other Services: 3pl, Rent, Platform
+Other services
+
+Costs Supply Chain is rising important to monitor it to have good unit economics 
+IT - services, salaries, 
+
+
+Allowances - lost items(our "prohet")
+
+
+
+Key drivers 
+
+Items -> GMV -> Posting
+
+
+GMV money that we accumulate in some way 
+
+Metrics
+AIV = average item value
+IPP =items per posting
+AOV
+Items per posting needed to understand utilities 
+
+Key revenue metrics and ratios
+
+Sales Comissions Platforms
+
+GP -gross profit (sum of all revenue streams)  
+Margin = GP/GMV
+Contribution (gp-costst) is it valuable for us to sell item 
+
+CPI - cost per item = cost/items
+CPL - sot per liter = cost per liter
+CPP - cost per posting = cost per posting
+
+When to use what?
+
+
+\end{document}
