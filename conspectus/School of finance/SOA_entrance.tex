@@ -1,0 +1,1717 @@
+%!TEX TS-program = xelatex
+\documentclass[12pt, a4paper, oneside]{article}
+
+%%%%%%%%%% Внешний вид страницы %%%%%%%%%%
+
+\usepackage[paper=a4paper, top=20mm, bottom=15mm,left=20mm,right=15mm]{geometry}
+\usepackage{indentfirst}    % установка отступа в первом абзаце главы
+
+\usepackage{setspace}
+\setstretch{1.15}  % межстрочный интервал
+\setlength{\parskip}{4mm}   % Расстояние между абзацами
+% Разные длины в LaTeX: https://en.wikibooks.org/wiki/LaTeX/Lengths
+
+% свешиваем пунктуацию
+% теперь знаки пунктуации могут вылезать за правую границу текста, при этом текст выглядит ровнее
+\usepackage{microtype}
+
+% \flushbottom                            % Эта команда заставляет LaTeX чуть растягивать строки, чтобы получить идеально прямоугольную страницу
+\righthyphenmin=2                       % Разрешение переноса двух и более символов
+\widowpenalty=300                     % Небольшое наказание за вдовствующую строку (одна строка абзаца на этой странице, остальное --- на следующей)
+\clubpenalty=3000                     % Приличное наказание за сиротствующую строку (омерзительно висящая одинокая строка в начале страницы)
+\tolerance=10000     % Ещё какое-то наказание.
+\usepackage[english, russian]{babel} % выбор языка для документа
+
+% меняю оформление секций 
+\usepackage{titlesec}
+\usepackage{sectsty}
+
+% выбрасываю нумерацию страниц и колонтитулы 
+\pagestyle{empty}
+
+% синие круглые бульпоинты в списках itemize 
+\usepackage{enumitem}
+
+
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+
+\usepackage{listings}
+% для кода 
+\documentclass[working]{article}
+\begin{document}
+
+\section{Key Concepts}
+\subsection{Key Concepts }
+\subsection{ BCG matrix }
+The BCG matrix, also known as the Boston Consulting Group matrix, is a tool used for strategic planning and decision-making. It helps organizations to evaluate their business units or products and make decisions about where to invest and divest resources.
+
+The BCG matrix is based on two dimensions: market growth rate and relative market share. Business units or products are classified into four categories:
+
+Stars: These are business units or products with high market growth rate and high relative market share. They require high investment to maintain their growth and market position.
+
+Cash cows: These are business units or products with low market growth rate and high relative market share. They generate a lot of cash for the organization, but require little investment.
+
+Question marks: These are business units or products with high market growth rate and low relative market share. They require a lot of investment to grow and may become stars or cash cows in the future, or they may be divested if they don't meet expectations.
+
+Dogs: These are business units or products with low market growth rate and low relative market share. They generate little cash and may be candidates for divestment.
+
+The BCG matrix helps organizations to evaluate their portfolio of business units or products and make decisions about where to invest and divest resources. It helps to identify opportunities for growth and potential areas of risk. For example, a business unit that is a star may require significant investment to maintain its growth, but may also have potential for further growth in the future. On the other hand, a business unit that is a dog may not be generating enough cash to justify its continued operation and may need to be divested.
+\subsection{ SWOT analysis }
+SWOT analysis is a tool used for strategic planning and decision-making. The acronym stands for Strengths, Weaknesses, Opportunities, and Threats. It involves evaluating the internal and external factors that affect an organization's ability to achieve its goals and objectives.
+
+The four elements of SWOT analysis are:
+
+Strengths: These are the internal factors that give an organization a competitive advantage. They include things like the organization's brand, reputation, resources, and expertise.
+
+Weaknesses: These are the internal factors that can hinder an organization's performance. They include things like poor management, lack of resources, and outdated technology.
+
+Opportunities: These are external factors that can help an organization achieve its goals. They include things like emerging markets, new technologies, and changes in regulations.
+
+Threats: These are external factors that can negatively impact an organization's performance. They include things like competition, economic downturns, and changes in consumer behavior.
+
+SWOT analysis involves identifying and analyzing each of these elements in order to develop a better understanding of the organization's position in the market and its potential for growth. The analysis can be used to identify areas where the organization is performing well and where it needs to improve, as well as opportunities for growth and threats that need to be addressed.
+
+SWOT analysis can be a useful tool for businesses, nonprofits, and government organizations. It provides a structured and systematic approach to identifying the key factors that affect an organization's performance and helps to inform strategic decision-making.
+
+
+
+
+\subsection{ Pareto analysis }
+Pareto analysis, also known as the 80/20 rule or the Pareto principle, is a tool used to identify and prioritize the most important factors contributing to a problem or issue. It is named after the Italian economist Vilfredo Pareto, who observed that 80% of the wealth in Italy was owned by 20% of the population.
+
+The basic idea behind Pareto analysis is that a small number of factors are responsible for a large percentage of the effects. This principle can be applied to a wide range of problems, from quality control to project management to customer service.
+
+Pareto analysis involves the following steps:
+
+Identify the problem: This involves clearly defining the problem or issue that needs to be addressed.
+
+Collect data: This involves collecting data on the problem, such as customer complaints, defects, or delays.
+
+Organize the data: This involves organizing the data into categories or groups, such as by type of complaint or area of the process.
+
+Analyze the data: This involves calculating the percentage of occurrences for each category and arranging them in descending order.
+
+Draw the Pareto chart: This involves plotting the categories on the X-axis and the percentage of occurrences on the Y-axis, and drawing a cumulative line graph to show the cumulative percentage of occurrences.
+
+Take action: This involves focusing on the categories that contribute to the largest percentage of occurrences and taking action to address them.
+
+Pareto analysis is a useful tool for identifying and prioritizing the most important factors contributing to a problem or issue. It helps to provide a structured and data-driven approach to problem-solving, and can help organizations to focus their efforts on the most important areas.
+\subsection{ INVEST concept }
+INVEST is an acronym that stands for Independent, Negotiable, Valuable, Estimable, Small, and Testable. It is a set of criteria used to define well-formed user stories in agile software development.
+
+Each of the letters in INVEST represents a characteristic of a well-formed user story:
+
+Independent: Each user story should be independent of other stories so that it can be developed and tested without dependencies on other work.
+
+Negotiable: User stories should be negotiable to allow for changes as the project progresses and requirements evolve.
+
+Valuable: User stories should provide value to the end user or customer.
+
+Estimable: User stories should be estimable so that the development team can determine how much time and effort will be required to complete the story.
+
+Small: User stories should be small enough to be completed within a single iteration or sprint.
+
+Testable: User stories should be testable so that the development team can verify that the story has been implemented correctly.
+
+The INVEST concept helps ensure that user stories are well-defined and meet the needs of the end user or customer. It encourages collaboration between the development team and the stakeholders, and allows for flexibility as the project progresses. By following the INVEST criteria, development teams can prioritize their work, improve communication, and deliver value to the customer more quickly and efficiently.
+
+
+
+
+\subsection{ Kano analysis }
+The basic idea behind Kano analysis is that customer needs can be categorized into three types:
+
+Basic needs: These are needs that customers expect to be met and take for granted. If these needs are not met, it can lead to dissatisfaction, but meeting them does not necessarily lead to increased customer satisfaction.
+
+Performance needs: These are needs that customers explicitly state and desire in a product or service. Meeting these needs can lead to increased customer satisfaction.
+
+Excitement needs: These are needs that customers may not explicitly state, but which can lead to increased customer satisfaction if met. These needs often involve innovative or unexpected features that exceed customer expectations.
+
+Kano analysis involves the following steps:
+
+Identify customer needs: This involves collecting data on customer needs and preferences through surveys, interviews, or other methods.
+
+Categorize the needs: This involves categorizing the needs into the three types described above.
+
+Prioritize the needs: This involves prioritizing the needs based on their impact on customer satisfaction and the effort required to meet them.
+
+Develop a plan: This involves developing a plan for meeting the customer needs, with a focus on addressing the most important needs first.
+
+Kano analysis can be a useful tool for product development, customer satisfaction, and market research. It helps to provide a structured approach to understanding and prioritizing customer needs, and can help organizations to focus their efforts on the most important areas.
+\subsection{ Pugh matrix }
+The Pugh matrix, also known as the decision matrix, is a tool used in problem-solving and decision-making processes. It is named after its creator, Stuart Pugh, who developed the method while working at the University of Strathclyde in Scotland.
+
+The Pugh matrix helps to evaluate and compare different alternatives or options based on a set of criteria. It involves the following steps:
+
+Identify the criteria: This involves identifying the criteria that are most important for evaluating the alternatives. These criteria can be quantitative (such as cost or time) or qualitative (such as customer satisfaction or ease of use).
+
+Select a baseline: This involves selecting one of the alternatives as a baseline or reference point for comparison.
+
+Evaluate the alternatives: This involves evaluating each of the alternatives against the criteria and comparing them to the baseline. This can be done by assigning a score or rating to each alternative for each criterion.
+
+Calculate the scores: This involves calculating the total score for each alternative by summing the scores for each criterion.
+
+Analyze the results: This involves analyzing the results to identify the strengths and weaknesses of each alternative and to make a decision based on the scores.
+
+The Pugh matrix can be a useful tool for comparing and evaluating different options or alternatives, especially when there are multiple criteria to consider. It helps to provide a structured and objective approach to decision-making, and can help to ensure that all relevant factors are taken into account.
+\subsection{ Flowchart }
+A flowchart is a visual representation of a process or system, using symbols and diagrams to show the various steps involved and the relationships between them. Flowcharts are commonly used in business, engineering, healthcare, and other fields to help people understand complex processes and systems.
+
+The basic elements of a flowchart include:
+
+Start and end points: These are the symbols that indicate the beginning and end of the process.
+
+Process steps: These are the symbols that represent the individual steps or actions involved in the process.
+
+Decision points: These are the symbols that represent points in the process where a decision must be made based on certain conditions.
+
+Flow lines or arrows: These are the lines or arrows that connect the symbols and indicate the flow of the process.
+
+Flowcharts can be created using a variety of software tools, or they can be drawn by hand. They can be simple or complex, depending on the process or system being represented. Flowcharts can be helpful in identifying areas where a process can be improved or streamlined, and they can be used to communicate complex ideas and processes to others.
+
+
+
+\subsection{ 100-point method }
+The 100-point method is a technique used in project management to prioritize tasks or activities based on their relative importance or value. It involves assigning a score of 1 to 100 to each task or activity based on its impact on the project's overall success, with higher scores indicating greater importance.
+
+The 100-point method typically involves the following steps:
+
+Identify all of the tasks or activities required to complete the project.
+
+Assign a score of 1 to 100 to each task or activity based on its impact on the project's success. The score should reflect the task's importance relative to the other tasks, with higher scores indicating greater importance.
+
+Total the scores for each task or activity to determine their overall priority. Tasks or activities with higher scores will be given higher priority than those with lower scores.
+
+Use the priority ranking to develop a project schedule or plan that ensures the highest-priority tasks are completed first and that resources are allocated appropriately.
+
+The 100-point method can be a useful tool for project managers to prioritize tasks and ensure that their resources are being allocated effectively. However, it is important to remember that the scores assigned to each task are subjective and may vary depending on the individual or team making the assessments. Therefore, it is important to use the 100-point method in conjunction with other project management techniques to ensure the best possible outcome for the project.
+\subsection{ GAP analysis }
+GAP analysis is a process of identifying the difference or "gap" between current performance or processes and desired performance or processes. It is a tool used by organizations to determine the steps needed to achieve their goals and objectives.
+
+The GAP analysis process typically involves the following steps:
+
+Identify the current state: This involves understanding the current performance or processes of the organization, including strengths, weaknesses, opportunities, and threats.
+
+Identify the desired state: This involves setting goals and objectives for the organization and determining what the ideal state would look like.
+
+Analyze the gap: This involves comparing the current state to the desired state and identifying the gaps that exist.
+
+Develop an action plan: This involves identifying the steps needed to close the gaps and achieve the desired state.
+
+Implement and monitor: This involves implementing the action plan and monitoring progress to ensure that the gaps are being closed and the desired state is being achieved.
+
+GAP analysis can be used in a wide range of contexts, including business, healthcare, education, and government. It can be a valuable tool for identifying areas where improvements can be made and helping organizations to achieve their goals.
+
+\subsection{ Diagrams: BPMN, SIPOC, UML, Gantt }
+BPMN (Business Process Model and Notation): BPMN is a graphical representation of business processes. It uses standard symbols to represent different activities, events, and flows in a process. BPMN diagrams help to visualize, analyze, and improve business processes.
+
+SIPOC (Suppliers, Inputs, Process, Outputs, Customers): SIPOC is a process mapping tool that helps to define and clarify processes. It provides a high-level overview of a process by identifying the key components involved, including suppliers, inputs, processes, outputs, and customers.
+
+UML (Unified Modeling Language): UML is a modeling language used for software development. It provides a standardized way to represent software architecture, design, and implementation. UML diagrams can represent a wide range of software development concepts, including use cases, class diagrams, sequence diagrams, and activity diagrams.
+
+Gantt chart: A Gantt chart is a visual representation of a project schedule. It shows the start and end dates of project tasks, as well as their dependencies and duration. Gantt charts are commonly used in project management to help plan and track progress.
+
+Each of these diagrams has its own unique purpose and use case, and can be helpful in different contexts depending on the needs of the project or organization.
+
+
+
+
+\subsection{ Fish Model vs. V Model  }
+The Fish Model and the V Model are two commonly used software development models that are used to manage the software development lifecycle. Here are some key differences between the two models:
+
+Fish Model:
+
+The Fish Model is a linear model that focuses on the sequence of activities involved in software development. It is called the "Fish" model because the flow of activities resembles the skeleton of a fish.
+
+Key features of the Fish Model include:
+
+Requirements gathering: In this phase, business requirements are gathered and documented.
+
+Analysis and design: In this phase, software design and architecture are developed based on the requirements.
+
+Implementation: In this phase, the software is developed based on the design.
+
+Testing: In this phase, the software is tested to ensure it meets the requirements.
+
+Deployment: In this phase, the software is deployed to production.
+
+V Model:
+
+The V Model is also a linear model that focuses on the relationship between testing and development activities. It is called the "V" model because the flow of activities resembles the letter V.
+
+Key features of the V Model include:
+
+Requirements gathering: In this phase, business requirements are gathered and documented.
+
+System design: In this phase, the system design is developed based on the requirements.
+
+Integration testing: In this phase, the system components are integrated and tested.
+
+Acceptance testing: In this phase, the software is tested to ensure it meets the business requirements.
+
+Deployment: In this phase, the software is deployed to production.
+
+The main difference between the Fish Model and the V Model is that the V Model emphasizes the importance of testing and quality assurance throughout the software development lifecycle. The V Model also emphasizes the importance of collaboration between development and testing teams, whereas the Fish Model is more focused on the sequence of activities.
+
+\section{Business Analyst Work Experience }
+The role of a business analyst in an organization is to bridge the gap between business needs and technology solutions by analyzing business processes, identifying areas for improvement, and proposing solutions to help the organization achieve its goals. Some specific responsibilities of a business analyst may include:
+
+Gather and document business requirements: Business analysts work closely with stakeholders to identify their requirements and document them in a clear and concise manner.
+
+Analyze business processes: Business analysts analyze current business processes to identify inefficiencies, bottlenecks, and areas for improvement.
+
+Identify and propose solutions: Based on their analysis, business analysts propose solutions to address the identified business problems or opportunities.
+
+Collaborate with stakeholders: Business analysts work closely with stakeholders from different teams and departments to ensure that proposed solutions are feasible and meet their needs.
+
+Support implementation: Business analysts may support the implementation of new systems or processes by providing training and support to end-users.
+
+Monitor and evaluate results: Business analysts track the success of implemented solutions and evaluate their impact on the organization's overall performance.
+
+Overall, the role of a business analyst is to ensure that technology solutions are aligned with business objectives and are implemented in a way that maximizes their value to the organization.
+
+
+
+\subsection{ What is the role of a business analyst in an organisation? }
+
+\subsection{ What, according to you, are the core competencies of a business analyst? }
+Analytical,Communication, Problem-solving , Critical thinking, Project management
+\subsection{ List some of the skills and tools used by business analysts }
+Business analysts require a range of skills and tools to effectively gather, analyze, and interpret data in order to inform business decisions. Here are some of the skills and tools commonly used by business analysts:
+
+Skills:
+
+Analytical skills: Business analysts need strong analytical skills to identify patterns and trends in data, and to make informed recommendations based on their findings.
+
+Communication skills: Business analysts must be able to communicate effectively with stakeholders, including presenting complex information in a clear and understandable way.
+
+Problem-solving skills: Business analysts need to be able to identify problems and develop solutions to address them, often by working collaboratively with other teams.
+
+Critical thinking skills: Business analysts need to be able to evaluate information and think critically to make informed decisions.
+
+Project management skills: Business analysts often work on complex projects with multiple stakeholders, and therefore require strong project management skills to ensure timelines are met and objectives are achieved.
+
+Tools:
+
+Microsoft Excel: Excel is a commonly used tool for organizing and analyzing data, creating charts and graphs, and developing reports.
+
+Data visualization tools: Tools like Tableau or Power BI enable business analysts to create interactive visualizations and dashboards to help stakeholders understand complex data sets.
+
+Business intelligence (BI) tools: BI tools like SAP, Oracle, or Microsoft BI enable business analysts to pull data from multiple sources and perform advanced data analytics.
+
+Customer relationship management (CRM) software: CRM software like Salesforce allows business analysts to track customer interactions and analyze customer data.
+
+Project management tools: Tools like Asana, Trello, or JIRA enable business analysts to manage complex projects and collaborate with stakeholders in real-time.
+\subsection{ Explain the business analysis process flow }
+wiu wiu wiu 
+\subsection{ What is the difference between a data analyst and a business analyst? }
+While both data analysts and business analysts are involved in analyzing data to inform business decisions, there are some key differences between the two roles.
+
+A data analyst primarily focuses on collecting, processing, and analyzing large volumes of data to identify patterns and trends. They use various tools and techniques such as statistical modeling, data visualization, and machine learning to extract insights from data. The data analyst role is often technical in nature, requiring proficiency in data management and programming languages such as SQL, Python, or R.
+
+On the other hand, a business analyst is responsible for identifying business problems, opportunities, and solutions by analyzing data within the context of the organization's overall goals and strategy. They work closely with stakeholders to understand their requirements and translate them into actionable insights. Business analysts use data to inform decision-making, but they also take into account other factors such as organizational structure, market conditions, and customer needs.
+
+In summary, while both roles involve working with data, a data analyst is more focused on technical skills and the manipulation of data, while a business analyst is more focused on the business context in which the data is being used and the insights it can provide to drive business decisions.
+\subsection{ Describe your process when researching a company or industry }
+Identify the company or industry to research: The first step is to determine the specific company or industry to research. This could be based on a specific topic, question, or area of interest.
+
+Gather information: Next, I would gather information from a variety of sources, including:
+
+Company website: I would start by visiting the company website to gather information on their products/services, mission statement, leadership team, and other relevant details.
+News articles: I would search for recent news articles related to the company or industry to identify any recent developments, trends, or challenges.
+Industry reports: I would also review industry reports from reputable sources to gain a broader perspective on the market and competition.
+Financial statements: If available, I would review the company's financial statements to gain insights into their financial performance.
+Analyze the information: Once I have gathered the relevant information, I would analyze it to identify key trends, strengths, weaknesses, opportunities, and threats related to the company or industry.
+
+Draw conclusions: Based on the information analyzed, I would draw conclusions and provide insights on the company or industry, including any potential implications for stakeholders.
+
+Present findings: Finally, I would organize the information and present my findings in a clear and concise manner, potentially using visual aids such as graphs or charts to enhance understanding.
+\subsection{ Why do you like a career as a business analyst?   }
+Problem-solving: Business analysts are responsible for analyzing complex data sets and identifying patterns and trends to make informed business decisions. This requires strong analytical skills and the ability to problem-solve.
+
+Variety of tasks: Business analysts have a diverse range of tasks that they perform, including gathering and analyzing data, creating reports, identifying areas for improvement, and collaborating with different teams. This variety can keep the job interesting and engaging.
+
+Impactful work: Business analysts have the potential to make a significant impact on their organization by identifying ways to increase efficiency, reduce costs, and improve processes.
+
+High demand: The demand for business analysts is growing as more companies recognize the value of data-driven decision-making. This means there are often a wide range of job opportunities available.
+
+Continuous learning: Business analysts are required to stay up-to-date with the latest technologies and trends in their field, which can provide ongoing learning opportunities and professional growth.
+
+\section{Quantitative Methods and Econometrics}
+\subsection{ Measures of central tendency: population mean, sample mean, arithmetic mean, geometric mean, harmonic mean }
+The population mean (or the expected value) is a measure of central tendency that represents the average of all observations in a population. It is denoted as $\mu$ and is calculated as follows:
+
+$\mu = \frac{\sum_{i=1}^{N}x_i}{N}$
+
+where $x_i$ is the $i^{th}$ observation and $N$ is the total number of observations in the population.
+
+The sample mean is a measure of central tendency that represents the average of a sample drawn from a population. It is denoted as $\bar{x}$ and is calculated as follows:
+
+$\bar{x} = \frac{\sum_{i=1}^{n}x_i}{n}$
+
+where $x_i$ is the $i^{th}$ observation in the sample and $n$ is the total number of observations in the sample.
+
+The arithmetic mean is the same as the sample mean or the population mean. It is calculated by summing up all the observations and dividing by the number of observations.
+
+The geometric mean is a measure of central tendency that represents the average of the logarithms of all observations. It is denoted as $G$ and is calculated as follows:
+
+$G = (\prod_{i=1}^{n}x_i)^{\frac{1}{n}}$
+
+The harmonic mean is a measure of central tendency that represents the average of the reciprocals of all observations. It is denoted as $H$ and is calculated as follows:
+
+$H = \frac{n}{\sum_{i=1}^{n}\frac{1}{x_i}}$
+
+Note: The harmonic mean is only applicable for positive observations and is generally smaller than the other measures of central tendency.
+\subsection{ Measures of location and dispersion: quantile, mean absolute deviation, sample variance and standard deviation }
+Measures of location and dispersion are used to describe the distribution of a set of data. They provide information about where the data is centered and how spread out the data is. There are several measures of location and dispersion, including quantile, mean absolute deviation, sample variance, and standard deviation.
+
+A quantile is a value that separates the data into equal parts. The $p^{th}$ quantile, denoted as $Q_p$, is the value such that $p$ percent of the observations are less than or equal to $Q_p$.
+
+The mean absolute deviation (MAD) is a measure of dispersion that represents the average absolute deviation of the observations from the mean. It is denoted as $MAD$ and is calculated as follows:
+
+$MAD = \frac{\sum_{i=1}^{n}|x_i - \bar{x}|}{n}$
+
+where $x_i$ is the $i^{th}$ observation in the sample and $\bar{x}$ is the sample mean.
+
+The sample variance, denoted as $s^2$, is a measure of dispersion that represents the average squared deviation of the observations from the sample mean. It is calculated as follows:
+
+$s^2 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n-1}$
+
+The standard deviation, denoted as $s$, is the square root of the sample variance. It is calculated as follows:
+
+$s = \sqrt{s^2}$
+
+Note: The sample variance and standard deviation are only applicable for a sample drawn from a population and not for the entire population.
+\subsection{ Skewness, kurtosis, and correlation  }
+Skewness, kurtosis, and correlation are measures that describe the shape, peakness, and relationship between two variables, respectively.
+
+Skewness is a measure of the asymmetry of a distribution. It is calculated as the third standardized moment of a distribution and can be either positive, negative, or zero. Positive skewness indicates that the tail of the distribution extends to the right, negative skewness indicates that the tail extends to the left, and zero skewness indicates a symmetric distribution. The formula for skewness is given by:
+
+$Skewness = \frac{\frac{1}{n} \sum_{i=1}^{n} (\frac{x_i - \bar{x}}{s})^3}{(\frac{1}{n} \sum_{i=1}^{n} (\frac{x_i - \bar{x}}{s})^2)^{3/2}}$
+
+where $x_i$ is the $i^{th}$ observation, $\bar{x}$ is the sample mean, $s$ is the sample standard deviation, and $n$ is the sample size.
+
+Kurtosis is a measure of the peakedness of a distribution. It is calculated as the fourth standardized moment of a distribution and can be either positive, negative, or zero. Positive kurtosis indicates a more peaked distribution than a normal distribution, negative kurtosis indicates a flatter distribution than a normal distribution, and zero kurtosis indicates a normal distribution. The formula for kurtosis is given by:
+
+$Kurtosis = \frac{\frac{1}{n} \sum_{i=1}^{n} (\frac{x_i - \bar{x}}{s})^4}{(\frac{1}{n} \sum_{i=1}^{n} (\frac{x_i - \bar{x}}{s})^2)^2} - 3$
+
+where $x_i$ is the $i^{th}$ observation, $\bar{x}$ is the sample mean, $s$ is the sample standard deviation, and $n$ is the sample size.
+
+Correlation measures the relationship between two variables. It is calculated as the covariance between two variables divided by the product of their standard deviations. The formula for Pearson's correlation coefficient, denoted as $\rho$, is given by:
+
+$\rho = \frac{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{s_x s_y}$
+
+where $x_i$ and $y_i$ are the $i^{th}$ observations of two variables, $\bar{x}$ and $\bar{y}$ are the sample means of the two variables, $s_x$ and $s_y$ are the sample standard deviations of the two variables, and $n$ is the sample size.
+\subsection{ Expected value, variance and covariance }
+
+Expected value, variance, and covariance are important concepts in probability and statistics. They are used to describe the distribution of a random variable and the relationship between two random variables.
+
+The expected value, also known as the mean or the first moment, of a random variable is a measure of its central tendency. It is the weighted average of all possible values that the random variable can take, where the weights are the probabilities of each value. The formula for the expected value of a discrete random variable X, denoted as $E(X)$, is given by:
+
+$E(X) = \sum_{i} x_i P(X = x_i)$
+
+where $x_i$ is the $i^{th}$ possible value of the random variable X and $P(X = x_i)$ is the probability of the random variable taking the value $x_i$.
+
+Variance is a measure of the spread of a random variable. It is the average of the squared deviations of the random variable from its expected value. The formula for the variance of a discrete random variable X, denoted as $Var(X)$, is given by:
+
+$Var(X) = \sum_{i} (x_i - E(X))^2 P(X = x_i)$
+
+Covariance measures the relationship between two random variables. It is the average of the product of the deviations of the two random variables from their expected values. The formula for the covariance between two random variables X and Y, denoted as $Cov(X, Y)$, is given by:
+
+$Cov(X, Y) = \sum_{i} (x_i - E(X))(y_i - E(Y))P(X = x_i, Y = y_i)$
+
+Note: If the two random variables are uncorrelated, their covariance is zero. If the two random variables are positively correlated, their covariance is positive, and if they are negatively correlated, their covariance is negative.
+\subsection{ Confidence interval }
+Confidence interval is a range of values that is used to estimate an unknown population parameter with a certain degree of confidence. In other words, it is a measure of the precision of an estimate. Given a sample of data, a confidence interval provides an interval of values that is likely to contain the true value of the population parameter with a specified probability, called the confidence level.
+
+The formula for a confidence interval for the population mean $\mu$ of a normally distributed population, given a sample mean $\bar{x}$ and sample standard deviation $s$, with a confidence level of $1 - \alpha$ is given by:
+
+$\bar{x} \pm z_{\frac{\alpha}{2}} \frac{s}{\sqrt{n}}$
+
+where $z_{\frac{\alpha}{2}}$ is the critical value from the standard normal distribution with a cumulative probability of $\frac{\alpha}{2}$ to the left of it and $n$ is the sample size.
+
+In general, a larger sample size and a lower confidence level result in a narrower confidence interval, which means that the estimate is more precise. Confidence intervals provide a useful way to communicate the uncertainty around an estimate and are widely used in statistical analysis and hypothesis testing.
+\subsection{ Normal distribution. Standard normal distribution. Lognormal distribution }
+The normal distribution, also known as the Gaussian distribution, is a continuous probability distribution that is commonly used to model real-valued random variables. It is characterized by its mean $\mu$ and variance $\sigma^2$. A normal distribution with mean $\mu$ and variance $\sigma^2$ is denoted as $N(\mu, \sigma^2)$.
+
+The standard normal distribution is a normal distribution with a mean of 0 and a variance of 1. It is denoted as $N(0, 1)$. The standard normal distribution is important because many real-world variables can be transformed into standard normal variables through a technique called standardization, which makes it possible to use tables and software to find probabilities and make inferences.
+
+The lognormal distribution is a continuous probability distribution that models the distribution of the logarithm of a random variable. It is often used to model variables that are positively skewed, such as financial returns, income, and stock prices. The lognormal distribution is characterized by its mean $\mu$ and standard deviation $\sigma$. A lognormal distribution with mean $\mu$ and standard deviation $\sigma$ is denoted as $LN(\mu, \sigma)$.
+
+In summary, the normal distribution is widely used to model real-valued random variables, while the standard normal distribution is a standardized version of the normal distribution and is used in many statistical procedures. The lognormal distribution is used to model positively skewed variables and is often used in finance and economics.
+\subsection{ Student’s t-distribution }
+The Student's t-distribution is a continuous probability distribution that is used to make inferences about the mean of a population when the sample size is small or when the population variance is unknown. It is named after William Sealy Gosset, who wrote under the pseudonym "Student."
+
+The t-distribution has heavier tails than the normal distribution, which means that it allows for more extreme values than the normal distribution. The shape of the t-distribution is determined by its degrees of freedom (df), which is the number of independent observations minus the number of parameters estimated from the sample. The larger the degrees of freedom, the closer the t-distribution approximates the standard normal distribution.
+
+The formula for the probability density function (pdf) of the t-distribution with df degrees of freedom is:
+
+$f(x) = \frac{\Gamma(\frac{df + 1}{2})}{\sqrt{df \pi} \Gamma(\frac{df}{2})} (1 + \frac{x^2}{df})^{-\frac{df + 1}{2}}$
+
+where $\Gamma$ is the gamma function.
+
+The t-distribution is widely used in hypothesis testing and confidence interval estimation, especially when the sample size is small or the population variance is unknown. It provides a useful way to account for the uncertainty associated with small sample sizes and allows for more accurate inferences than would be possible with the normal distribution alone.
+\subsection{ Chi-square distribution }
+The chi-square distribution is a continuous probability distribution that is used to model the sum of the squares of independent standard normal random variables. It is commonly used in hypothesis testing to assess the goodness of fit of a model, to test independence in contingency tables, and to test for homogeneity in variance.
+
+The chi-square distribution has one parameter, degrees of freedom (df), which is equal to the number of independent standard normal random variables that are squared and summed. The formula for the probability density function (pdf) of the chi-square distribution with df degrees of freedom is:
+
+$f(x) = \frac{1}{2^{\frac{df}{2}} \Gamma(\frac{df}{2})} x^{\frac{df}{2} - 1} e^{-\frac{x}{2}}$
+
+where $\Gamma$ is the gamma function.
+
+The chi-square distribution is symmetric and positively skewed, and its mean and variance are equal to its degrees of freedom. It is widely used in statistical analysis and is an important distribution in many statistical procedures, including hypothesis testing and model fitting.
+\subsection{ Monte Carlo simulation }
+Monte Carlo simulation is a statistical method that involves generating random values from a specified probability distribution to simulate real-world problems and estimate outcomes. The term "Monte Carlo" refers to the use of random sampling, just as the famous casino in Monaco uses random sampling to determine the outcome of games.
+
+In Monte Carlo simulation, we generate a large number of random values, perform a series of calculations using these random values, and analyze the resulting outcomes to obtain an estimate of the desired quantity. For example, Monte Carlo simulation can be used to estimate the value of a financial derivative, to evaluate the risk associated with an investment, or to calculate the expected cost of a manufacturing process.
+
+One of the main advantages of Monte Carlo simulation is its ability to account for uncertainty and variability in real-world problems. This makes it a useful tool for solving complex problems where traditional analytical methods may be inadequate. Monte Carlo simulation is widely used in various fields, including finance, engineering, physics, and biology.
+\subsection{ Probability sampling methods: systematic sampling, stratified random sampling, cluster sampling }
+Probability sampling methods are techniques used to select a sample from a population in such a way that each member of the population has a known, non-zero probability of being included in the sample. These methods allow for the estimation of population parameters from a smaller, more manageable sample, and provide a means for making generalizations about the population based on the sample results.
+
+Systematic sampling: Systematic sampling involves selecting every kth member of the population to be included in the sample, where k is the sampling interval. The first member of the sample is selected randomly from the first k members of the population. The systematic sampling formula is as follows:
+$$ X_i = X_{(i-1)k + R} $$
+
+where X is the population, i is the sample number, k is the sampling interval, and R is a random number between 1 and k.
+
+Stratified random sampling: Stratified random sampling involves dividing the population into subgroups, or strata, based on some criterion, and then randomly selecting a sample from each stratum. The objective is to ensure that the sample reflects the composition of the population with respect to the criterion used to form the strata.
+
+Cluster sampling: Cluster sampling involves dividing the population into groups, or clusters, and selecting a sample of clusters to be included in the sample. All members of the selected clusters are then included in the sample. The objective is to reduce the cost of sampling by reducing the number of units that need to be measured.
+
+These methods are widely used in various applications of sampling, including market research, health surveys, and population studies. The choice of method depends on the characteristics of the population and the goals of the study.
+\subsection{ Central limit theorem }
+The Central Limit Theorem (CLT) is a fundamental concept in probability and statistics that states that for a large enough sample size, the distribution of the sum (or average) of independent and identically distributed (i.i.d.) random variables will approach a normal distribution, regardless of the shape of the original distribution. Mathematically, the CLT can be stated as follows:
+
+Let $X_1, X_2, ..., X_n$ be i.i.d. random variables with mean μ and standard deviation σ. Then, the distribution of the sample mean,
+
+\frac{X_1 + X_2 + ... + X_n}{n}
+
+will converge to a normal distribution with mean μ and standard deviation
+
+\frac{\sigma}{\sqrt{n}}
+
+as n approaches infinity. In other words, the larger the sample size, the more closely the distribution of the sample mean will approximate a normal distribution.
+
+\subsection{ Hypothesis tests: null vs. alternative hypothesis, one-tail vs. two-tail hypothesis test }
+A hypothesis test is a statistical procedure used to make a decision about an unknown population parameter based on a sample of data. In a hypothesis test, there are two types of hypotheses: the null hypothesis, denoted as $H_0$, and the alternative hypothesis, denoted as $H_a$.
+
+$H_0$ represents the assumption that there is no difference or relationship between variables, or that a population parameter has a specific value. For example, $H_0$ might be that the population mean is equal to a certain value, or that two groups have the same mean.
+
+$H_a$ represents the opposite of the null hypothesis and states that there is a difference or relationship between variables, or that the population parameter does not have the value specified in $H_0$. For example, $H_a$ might be that the population mean is not equal to a certain value, or that two groups have different means.
+
+The goal of a hypothesis test is to either reject or fail to reject the null hypothesis based on the sample data. There are two types of hypothesis tests: one-tail and two-tail hypothesis tests.
+
+In a one-tail hypothesis test, the alternative hypothesis is specified in one direction, either greater than or less than a specified value. For example, $H_0$ might be that the population mean is equal to a certain value, and $H_a$ might be that the population mean is greater than that value.
+
+In a two-tail hypothesis test, the alternative hypothesis is specified in both directions, either greater than or less than a specified value. For example, $H_0$ might be that the population mean is equal to a certain value, and $H_a$ might be that the population mean is not equal to that value.
+\subsection{ Type I and Type II errors }
+
+Вы беременны - но я же мужчина. Извините - ошибка второго рода
+\subsection{ Statistical significance and interpretation. P-value }
+The concept of statistical significance is used to assess whether the results of a hypothesis test are unlikely to have occurred by chance. The statistical significance of a result is typically measured by the P-value, which is the probability of observing the sample data (or more extreme data) assuming the null hypothesis is true.
+
+In hypothesis testing, a small P-value (typically less than 0.05) is interpreted as evidence against the null hypothesis, and supports the alternative hypothesis. In other words, a small P-value indicates that the sample data are not consistent with the null hypothesis, and suggests that the true population parameter is not equal to the value specified in $H_0$.
+
+A large P-value (typically greater than 0.05), on the other hand, indicates that the sample data are consistent with the null hypothesis, and fails to provide evidence against it. In this case, the null hypothesis cannot be rejected and the results are considered statistically insignificant.
+
+Mathematically, the P-value is calculated as the probability of observing a test statistic as extreme or more extreme than the one calculated from the sample data, assuming the null hypothesis is true. It can be calculated using various methods, including analytical methods or simulation techniques such as Monte Carlo simulation.
+
+The P-value can be used as a guide for making decisions in hypothesis testing, but it should not be interpreted as the probability that the null hypothesis is true, or that the alternative hypothesis is false.
+\subsection{ t-test, z-test and chi-square test }
+
+The t-test is a hypothesis test that is used to compare the means of two samples. It is often used when the sample size is small, or the population standard deviation is unknown. The t-test is based on the t-distribution, which is a distribution of the difference between two means standardized by the estimated standard error of the difference.
+
+The z-test is a hypothesis test that is used to compare the means of two samples when the population standard deviation is known. The z-test is based on the standard normal distribution, and the test statistic is calculated as the difference between the sample mean and the population mean, standardized by the population standard deviation.
+
+The chi-square test is a hypothesis test that is used to determine if there is a relationship between two categorical variables. The chi-square test calculates the difference between the observed and expected frequencies in a contingency table and measures if this difference is significant. The test statistic follows a chi-square distribution, which is used to determine the level of significance of the test.
+
+Let's denote the sample mean as $\overline{x}$, population mean as $\mu$, sample standard deviation as $s$, population standard deviation as $\sigma$, and sample size as $n$.
+
+For the t-test, the test statistic is given by:
+
+$$t = \frac{\overline{x} - \mu}{\frac{s}{\sqrt{n}}}$$
+
+For the z-test, the test statistic is given by:
+
+$$z = \frac{\overline{x} - \mu}{\frac{\sigma}{\sqrt{n}}}$$
+
+For the chi-square test, the test statistic is given by:
+
+$$\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}$$
+
+where $O_i$ is the observed frequency in cell $i$, $E_i$ is the expected frequency in cell $i$, and $k$ is the number of cells in the contingency table.
+
+\subsection{ Simple linear regression model: sum of squared errors (SSE), slope coefficient interpretation }
+In the simple linear regression model, the goal is to model the relationship between a dependent variable and an independent variable. The model is represented by a linear equation:
+
+$y = b_0 + b_1x$
+
+where $y$ is the dependent variable, $x$ is the independent variable, $b_0$ is the intercept, and $b_1$ is the slope coefficient. The slope coefficient represents the change in the dependent variable for a unit change in the independent variable.
+
+To estimate the parameters of the model, the method of least squares is used, which minimizes the sum of squared errors (SSE) between the observed and predicted values. The SSE is defined as:
+
+$SSE = \sum_{i=1}^n (y_i - \hat{y}_i)^2$
+
+where $y_i$ is the observed value of the dependent variable, $\hat{y}_i$ is the predicted value of the dependent variable, and $n$ is the number of observations.
+
+Once the parameters are estimated, the model can be used to make predictions about the dependent variable based on a given independent variable. The interpretation of the slope coefficient is that it represents the change in the dependent variable for a unit change in the independent variable, holding all other variables constant.
+\subsection{ Homoskedasticity vs. heteroskedasticity  }
+Homoskedasticity and heteroskedasticity are terms used to describe the constant variance of residuals in a regression model.
+
+Homoskedasticity refers to the assumption that the variance of residuals (i.e. the differences between the observed and predicted values) is constant and equal across all values of the independent variable. In other words, the scatter of residuals is the same across all points on the plot of residuals versus the independent variable. This assumption is important for many statistical tests, such as t-tests, that are based on the normal distribution.
+
+Heteroskedasticity, on the other hand, refers to the situation where the variance of residuals is not constant and changes as a function of the independent variable. In other words, the scatter of residuals is different across different points on the plot of residuals versus the independent variable. This assumption can cause problems with many statistical tests, leading to incorrect results or biased coefficients.
+
+To check for homoskedasticity, one can plot residuals against the independent variable and look for a pattern. A constant scatter of residuals indicates homoskedasticity, while a pattern of increasing or decreasing variance indicates heteroskedasticity.
+
+\subsection{ Standard error of estimate (SEE), coefficient of determination (R-square), F-statistics }
+The Standard Error of the Estimate (SEE) is a measure of the variability of the estimate of the population regression line based on the sample data. It is calculated as the square root of the average of the squared differences between the observed and predicted values. Mathematically, it is represented as:
+
+$$SEE = \sqrt{\frac{1}{n-2} \sum_{i=1}^n (y_i - \hat{y_i})^2}$$
+
+where $y_i$ is the observed value for the $i^{th}$ observation, $\hat{y_i}$ is the predicted value, and $n$ is the number of observations.
+
+The Coefficient of Determination ($R^2$) is a measure of the proportion of variability in the dependent variable that is explained by the independent variable. It is calculated as the ratio of explained variation to total variation. Mathematically, it is represented as:
+
+$$R^2 = \frac{\sum_{i=1}^n (\hat{y_i} - \bar{y})^2}{\sum_{i=1}^n (y_i - \bar{y})^2}$$
+
+where $\hat{y_i}$ is the predicted value, $\bar{y}$ is the mean of the observed values, and $n$ is the number of observations.
+
+The F-statistic is used to test the overall significance of the regression model. It is calculated as the ratio of the explained variance to the unexplained variance. Mathematically, it is represented as:
+
+$$F = \frac{\left(\frac{\sum_{i=1}^n (\hat{y_i} - \bar{y})^2}{p}\right)}{\left(\frac{\sum_{i=1}^n (y_i - \hat{y_i})^2}{n-p-1}\right)}$$
+
+where $p$ is the number of predictors in the model and $n$ is the number of observations.
+\subsection{ Multiple linear regression model. Adjusted R-square, Dummy variables }
+Multiple linear regression models extend the concept of simple linear regression to model the relationship between a dependent variable and multiple independent variables. The equation of a multiple linear regression model is given by:
+
+$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_p x_p + \epsilon$
+
+where $y$ is the dependent variable, $\beta_0$ is the intercept term, $\beta_1, \beta_2, ..., \beta_p$ are the slope coefficients, $x_1, x_2, ..., x_p$ are the independent variables, and $\epsilon$ is the error term.
+
+In multiple linear regression models, the R-square is a commonly used measure of goodness of fit. It is defined as the proportion of variance in the dependent variable that is explained by the independent variables. The adjusted R-square is a modified version of the R-square that adjusts for the number of independent variables in the model.
+
+Dummy variables are a common way of including categorical variables in regression models. A dummy variable is a binary variable that represents a categorical variable with more than two categories. For example, in a study on the effect of gender on height, gender can be represented as a dummy variable with male as 0 and female as 1.
+
+In multiple linear regression models, the F-statistic is used to test the overall significance of the independent variables in explaining the variation in the dependent variable. The F-statistic is calculated as the ratio of the explained variance to the residual variance. A large F-statistic value indicates that the independent variables are significantly related to the dependent variable.
+\subsection{ Time-series analysis: linear and log-linear trend models }
+Time-series analysis is a statistical method used to analyze and model the behavior of variables over time. A linear trend model assumes that the relationship between the independent variable (time) and the dependent variable is linear. The general form of a linear trend model is:
+
+$y_t = \beta_0 + \beta_1 t + \epsilon_t$
+
+where $y_t$ is the dependent variable, $t$ is time, $\beta_0$ is the intercept, $\beta_1$ is the slope, and $\epsilon_t$ is the error term.
+
+A log-linear trend model, also known as a logarithmic trend model, assumes that the relationship between the logarithms of the independent and dependent variables is linear. The general form of a log-linear trend model is:
+
+$\log(y_t) = \beta_0 + \beta_1 t + \epsilon_t$
+
+where $\log(y_t)$ is the logarithm of the dependent variable, $t$ is time, $\beta_0$ is the intercept, $\beta_1$ is the slope, and $\epsilon_t$ is the error term.
+
+Linear and log-linear trend models are used in time-series analysis to capture and model trends in the data over time. They are simple models that are easy to interpret and estimate, and they provide a useful starting point for more complex models that can be used to analyze and model more complex relationships between variables over time.
+
+\subsection{ Autocorrelations and autoregressive time-series models (AR) }
+Autocorrelation is a statistical measure of the dependence between the values of a time series at different time lags. It is used to assess the persistence of the time series and to identify patterns in the data over time.
+
+Autoregressive (AR) time-series models are models that describe the behavior of a time series by regressing it on its own lagged values. The general form of an AR model is:
+
+$y_t = \beta_0 + \beta_1 y_{t-1} + \beta_2 y_{t-2} + ... + \beta_p y_{t-p} + \epsilon_t$
+
+where $y_t$ is the dependent variable, $\beta_0, \beta_1, ..., \beta_p$ are parameters to be estimated, $y_{t-1}, y_{t-2}, ..., y_{t-p}$ are lagged values of the dependent variable, and $\epsilon_t$ is the error term. The integer $p$ is the order of the AR model and determines the number of lagged values of the dependent variable that are used in the regression.
+
+AR models are used in time-series analysis to capture the persistence of the time series, to explain its behavior over time, and to make predictions. They are widely used in many fields, including economics, finance, and engineering, and they provide a simple and intuitive way to model time-series data.
+
+\subsection{ Unit root test of nonstationarity }
+A unit root test is a statistical test used to determine if a time series is stationary or non-stationary. Stationarity is an important property of a time series because it means that its mean, variance, and autocorrelation structure do not change over time. Non-stationary time series can be more difficult to model and forecast than stationary time series.
+
+The most widely used unit root test is the Augmented Dickey-Fuller (ADF) test. The ADF test uses regression analysis to test the hypothesis that a time series has a unit root, which is a characteristic of a non-stationary time series. The general form of the regression used in the ADF test is:
+
+$\Delta y_t = \beta_0 + \beta_1 y_{t-1} + \beta_2 y_{t-2} + ... + \beta_p y_{t-p} + \epsilon_t$
+
+where $\Delta y_t = y_t - y_{t-1}$ is the first difference of the time series, $y_t$ is the dependent variable, $\beta_0, \beta_1, ..., \beta_p$ are parameters to be estimated, $y_{t-1}, y_{t-2}, ..., y_{t-p}$ are lagged values of the dependent variable, and $\epsilon_t$ is the error term.
+
+If the null hypothesis that a time series has a unit root is rejected, then the time series is considered to be stationary. If the null hypothesis cannot be rejected, then the time series is considered to be non-stationary.
+
+The ADF test is widely used in time-series analysis to test for stationarity and to determine the appropriate modeling and forecasting techniques to use for non-stationary time series.
+
+
+
+
+\subsection{ Moving-average time-series models (MA) }
+Moving-average (MA) time-series models are models that describe the behavior of a time series by regressing it on the errors or residuals from a lagged moving average of the series. The general form of an MA model is:
+
+$y_t = \mu + \epsilon_t + \theta_1 \epsilon_{t-1} + ... + \theta_q \epsilon_{t-q}$
+
+where $y_t$ is the dependent variable, $\mu$ is the mean of the series, $\epsilon_t$ is the error term, and $\theta_1, ..., \theta_q$ are parameters to be estimated. The integer $q$ is the order of the MA model and determines the number of lagged error terms that are used in the regression.
+
+MA models are used in time-series analysis to capture short-term fluctuations or irregular patterns in the data, such as spikes, dips, and outliers. They are particularly useful when the time series is non-stationary and has a non-constant mean and variance over time.
+
+MA models are widely used in many fields, including economics, finance, and engineering, and they provide a simple and intuitive way to model time-series data. When combined with AR models, they form the class of Autoregressive Moving-Average (ARMA) models, which are widely used for modeling and forecasting time-series data.
+\subsection{ Seasonality in time-series models }
+Seasonality in time-series models refers to the systematic variation in a time series data that occurs at regular intervals, such as daily, weekly, monthly, or yearly. Seasonality is often caused by patterns in demand, production, or consumption that repeat over time, such as holidays, seasons, or monthly payments.
+
+In time-series analysis, seasonality is typically modeled using either additive or multiplicative models, depending on the nature of the data. An additive seasonality model has the form:
+
+$y_t = T_t + S_t + \epsilon_t$
+
+where $y_t$ is the dependent variable, $T_t$ is the trend component, $S_t$ is the seasonality component, and $\epsilon_t$ is the error term. In an additive seasonality model, the seasonal effect is constant over time and is added to the trend component to form the observed value.
+
+A multiplicative seasonality model has the form:
+
+$y_t = T_t \cdot S_t \cdot \epsilon_t$
+
+where $y_t$ is the dependent variable, $T_t$ is the trend component, $S_t$ is the seasonality component, and $\epsilon_t$ is the error term. In a multiplicative seasonality model, the seasonal effect is proportional to the trend component and the observed value is obtained by multiplying the trend and seasonal components.
+
+In both cases, the seasonal component can be modeled using periodic functions, such as sine and cosine, or using a set of dummy variables that represent the different seasons. The choice of model and the number of seasons to include depend on the nature of the data and the goals of the analysis.
+
+Seasonality modeling is important in time-series analysis because it allows for the capture and understanding of the regular patterns in the data, and provides a more accurate representation of the underlying behavior of the series. Seasonality models are widely used in many fields, including economics, finance, and marketing, to analyze and forecast time-series data.
+\subsection{ Autoregressive moving-average models (ARMA) and autoregressive conditional heteroskedasticity models (ARCH)  }
+
+Autoregressive Moving Average (ARMA) models are time series models that combine both autoregressive (AR) and moving average (MA) models to describe the evolution of a time series over time. ARMA models are used to analyze and predict time series data by taking into account both the past values of the series and the residuals (the errors) from a moving average model.
+
+An ARMA(p, q) model has the following form:
+
+$y_t = \phi_1 y_{t-1} + \phi_2 y_{t-2} + ... + \phi_p y_{t-p} + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + ... + \theta_q \epsilon_{t-q}$
+
+where $y_t$ is the dependent variable at time $t$, $\epsilon_t$ is the error term, $\phi_1, \phi_2, ..., \phi_p$ are the autoregressive coefficients, and $\theta_1, \theta_2, ..., \theta_q$ are the moving average coefficients.
+
+Autoregressive Conditional Heteroskedasticity (ARCH) models are a class of models used to model time series data with time-varying volatility. ARCH models are used to capture the dynamics of the volatility of a time series and to model the conditional variance of the error term in a time series model.
+
+An ARCH(p) model has the following form:
+
+$\sigma_t^2 = \omega + \alpha_1 \epsilon_{t-1}^2 + \alpha_2 \epsilon_{t-2}^2 + ... + \alpha_p \epsilon_{t-p}^2$
+
+where $\sigma_t^2$ is the conditional variance at time $t$, $\omega$ is a constant, $\epsilon_t$ is the error term, and $\alpha_1, \alpha_2, ..., \alpha_p$ are the ARCH coefficients.
+
+ARMA and ARCH models are widely used in finance, economics, and other fields to analyze and predict time-series data, particularly in the context of volatility forecasting. These models provide a flexible and comprehensive framework for modeling the complex dynamics of time series data, and can be used in combination with other models, such as GARCH (Generalized Autoregressive Conditional Heteroskedasticity), to improve the accuracy of time series predictions.
+\subsubsection{GARCH}
+Generalized Autoregressive Conditional Heteroskedasticity (GARCH) models are an extension of ARCH models that allow for the modeling of both the mean and the volatility of a time series. GARCH models are used to capture the dynamics of both the expected value and the volatility of a time series, and are widely used in finance, economics, and other fields to analyze and predict time-series data, particularly in the context of volatility forecasting.
+
+A GARCH(p, q) model has the following form:
+
+$y_t = \mu + \epsilon_t$
+
+$\sigma_t^2 = \omega + \alpha_1 \epsilon_{t-1}^2 + \alpha_2 \epsilon_{t-2}^2 + ... + \alpha_p \epsilon_{t-p}^2 + \beta_1 \sigma_{t-1}^2 + \beta_2 \sigma_{t-2}^2 + ... + \beta_q \sigma_{t-q}^2$
+
+where $y_t$ is the dependent variable at time $t$, $\mu$ is the mean, $\epsilon_t$ is the error term, $\sigma_t^2$ is the conditional variance at time $t$, $\omega$ is a constant, $\alpha_1, \alpha_2, ..., \alpha_p$ are the ARCH coefficients, $\beta_1, \beta_2, ..., \beta_q$ are the GARCH coefficients, and $\sigma_{t-1}^2, \sigma_{t-2}^2, ..., \sigma_{t-q}^2$ are the past conditional variances.
+
+GARCH models provide a flexible framework for modeling the complex dynamics of time series data, and can be used in combination with other models, such as ARMA and ARCH, to improve the accuracy of time series predictions. GARCH models have been widely used in finance and economics to analyze financial time-series data, including stock returns, exchange rates, and interest rates, among others.
+
+
+
+
+\section{Probability Theory}
+\subsection{ Basic probability definitions and set operations: outcome, sample space / probability space, event, mutually exclusive, exhaustive events, random variable  }
+Probability theory is a branch of mathematics that deals with the study of random events and the likelihood of their occurrence. Basic probability definitions and set operations are a fundamental part of probability theory, and include the following concepts:
+
+Outcome: An outcome is a specific result of a random event, for example, the result of flipping a coin could be either heads or tails.
+
+Sample space / Probability space: The sample space is the set of all possible outcomes of a random event, and the probability space is the set of all possible outcomes along with their associated probabilities.
+
+Event: An event is a set of outcomes of a random event. For example, getting heads in a coin flip is an event.
+
+Mutually Exclusive: Two events are said to be mutually exclusive if they cannot occur at the same time. For example, getting heads and tails in a coin flip are mutually exclusive events.
+
+Exhaustive events: A set of events is said to be exhaustive if the occurrence of any one of the events implies that all other events do not occur. For example, getting heads or tails in a coin flip are exhaustive events.
+
+Random variable: A random variable is a function that maps the outcomes of a random event to real numbers. For example, let X be a random variable that represents the outcome of rolling a die, then X can take values 1, 2, 3, 4, 5, or 6.
+
+These basic definitions and set operations form the foundation for more advanced concepts in probability theory, including conditional probability, Bayes' theorem, and stochastic processes, among others.
+\subsubsection{axiomatic approach to probability}
+The Kolmogorov view of probability is an axiomatic approach to probability theory that defines probability as a measure of uncertainty. This view is named after the Russian mathematician Andrei Kolmogorov, who proposed it in 1933.
+
+In the Kolmogorov view, a probability space is defined as a triplet (Ω, F, P), where Ω is a sample space, F is a σ-algebra of events, and P is a probability measure. The σ-algebra represents a collection of subsets of the sample space that are considered to be events, and the probability measure assigns a value between 0 and 1 to each event, indicating the degree of uncertainty associated with the event.
+
+The Kolmogorov axioms state that the probability measure must satisfy the following properties:
+
+P(Ω) = 1, meaning that the probability of the entire sample space is equal to 1.
+
+P(A) ≥ 0 for all events A in F, meaning that the probability of any event must be nonnegative.
+
+If A1, A2, ... are mutually exclusive events, then P(A1 ∪ A2 ∪ ...) = P(A1) + P(A2) + ..., meaning that the probability of the union of mutually exclusive events is equal to the sum of their individual probabilities.
+
+Using these axioms, the Kolmogorov view provides a mathematical framework for defining and calculating probabilities of events, and for modeling random processes. It is widely used in many areas of science, engineering, and finance, including statistics, machine learning, and risk analysis.
+
+Here is an example that defines all three members of the probability space triplet (Ω, F, P):
+
+Suppose we want to calculate the probability of flipping heads or tails when flipping a fair coin. To do this, we can define our sample space as Ω = {Heads, Tails}. The set of events that represent flipping heads or tails is F = {{Heads}, {Tails}, {Heads, Tails}}. Finally, the probability measure P is defined as follows:
+
+P({Heads}) = 1/2,
+P({Tails}) = 1/2,
+P({Heads, Tails}) = 1.
+
+So the probability space is (Ω, F, P) = ({Heads, Tails}, {{Heads}, {Tails}, {Heads, Tails}}, P), where P is defined by the above equations.
+
+In this example, the sample space Ω represents all possible outcomes when flipping a coin, the set of events F represents all the subsets of the sample space that are considered to be events, and the probability measure P assigns a value between 0 and 1 to each event, indicating the degree of uncertainty associated with the event.
+\subsection{ Combinatorial analysis: permutations, combination, binomial theorem, Inclusion-Exclusion Principle }
+\subsection{ Unconditional and conditional probability. Joint probability }
+Unconditional probability refers to the probability of an event occurring without any additional information or conditions. The unconditional probability of an event A can be represented as P(A).
+
+Conditional probability refers to the probability of an event occurring given that another event has already occurred. The conditional probability of event A given event B is represented as P(A|B). It is calculated as P(A|B) = P(A and B) / P(B), where P(A and B) is the joint probability of both events occurring.
+
+Joint probability refers to the probability of two or more events occurring simultaneously. The joint probability of events A and B is represented as P(A and B). It is calculated as P(A and B) = P(A) * P(B|A), where P(B|A) is the conditional probability of event B given event A.
+
+Understanding the relationship between unconditional, conditional and joint probability is fundamental in probability theory and has many applications in fields such as statistical inference and decision making.
+\subsection{ Law of total probability }
+The law of total probability states that for a partition of a sample space into mutually exclusive events, the probability of any event in the sample space can be calculated as the sum of the probabilities of the events in the partition.
+
+Formally, let Ω be the sample space and let {B1, B2, ..., Bn} be a partition of Ω into mutually exclusive events, meaning that the events do not overlap and their union is equal to the sample space. Then, for any event A, the law of total probability can be written as:
+
+P(A) = P(A and B1) + P(A and B2) + ... + P(A and Bn) = P(B1)P(A|B1) + P(B2)P(A|B2) + ... + P(Bn)P(A|Bn)
+
+In other words, the probability of event A can be calculated by summing up the probabilities of the events in the partition conditional on event A.
+
+The law of total probability is a useful tool for calculating the probability of complex events by breaking them down into simpler, easier to calculate events. It is widely used in fields such as Bayesian statistics, decision theory and actuarial science.
+
+
+
+
+\subsection{ Bayes’ formula }
+Bayes' formula is a fundamental theorem in probability theory that provides a way of updating the probability of an event based on new information. It states that the posterior probability of an event A given evidence B is proportional to the prior probability of the event A multiplied by the likelihood of the evidence B given the event A.
+
+Formally, let A and B be two events with prior probabilities P(A) and P(B), and let P(B|A) be the likelihood of the evidence B given event A. Then, Bayes' formula can be written as:
+
+P(A|B) = P(A) * P(B|A) / P(B)
+
+where P(A|B) is the posterior probability of event A given evidence B.
+
+Bayes' formula is widely used in Bayesian statistics for updating the probabilities of hypotheses given new data. It is also used in fields such as machine learning, pattern recognition and artificial intelligence, where it is often used to estimate the probability of certain outcomes given observations.
+
+\subsection{ Discrete and continuous distributions: common function of random variables, discrete random variables, continuous random variables   }
+Discrete and continuous distributions are two types of probability distributions that describe the behavior of random variables.
+
+A random variable X is said to have a discrete distribution if its values are countable and can take on only certain specific values. Examples of discrete distributions include the Bernoulli distribution, binomial distribution, Poisson distribution, and geometric distribution.
+
+A random variable Y is said to have a continuous distribution if its values can take on any value in an interval. Examples of continuous distributions include the uniform distribution, normal distribution, exponential distribution, and gamma distribution.
+
+The common function of random variables is the probability density function (pdf) for continuous random variables and the probability mass function (pmf) for discrete random variables. The pdf and pmf give the probabilities of a random variable taking on a specific value or an interval of values.
+
+For continuous random variables, the cumulative distribution function (cdf) is also a useful tool for characterizing the distribution. The cdf gives the probability that the random variable takes on a value less than or equal to a given value.
+
+The choice between a discrete or continuous distribution depends on the nature of the problem being solved and the type of data being analyzed. Discrete distributions are typically used when the random variable takes on only a finite or countably infinite number of values, while continuous distributions are used when the random variable can take on any value in an interval.
+
+Expectation, variance, and covariance of random variables: expected value or mathematical expectation, variance, covariance, covariance matrix, correlation
+
+The expected value (also known as mathematical expectation) of a random variable X is a measure of its central tendency and is defined as the weighted average of the values it can take, where the weights are given by the probabilities of these values. Mathematically, the expected value of X, denoted E(X), is given by:
+
+E(X) = ∑x_i p_i
+
+where x_i are the possible values of X and p_i are their corresponding probabilities.
+
+The variance of a random variable X, denoted Var(X), measures its dispersion around the mean and is defined as:
+
+Var(X) = E((X - E(X))^2)
+
+The covariance of two random variables X and Y, denoted Cov(X, Y), measures the linear dependence between them and is defined as:
+
+Cov(X, Y) = E((X - E(X))(Y - E(Y)))
+
+The covariance matrix is a matrix of all possible covariances between the components of a multi-dimensional random variable, and the correlation is the normalized version of the covariance. The covariance and correlation provide important information about the dependence between different random variables and are widely used in various statistical methods, including regression analysis and principal component analysis.
+\section{SQL}
+\subsection{ What are basic SQL skills? }
+\subsection{ What is the difference between SQL and MySQL?  }
+\subsection{ What is PostgreSQL? }
+\subsection{ What are the different subsets of SQL? }
+\subsection{ What are joins in SQL? }
+Left, Inner, full, cross
+\subsection{ What are SQL comments? }
+
+\subsection{ What are Tables and Fields? }
+\subsection{ What is a Unique key? }
+\subsection{ What is an Index? }
+\subsection{ What is a View? }
+\subsection{ What is ETL? }
+\subsection{ What is DWH? }
+\subsection{ Explain different types of Normalization }
+\subsection{ What is the SELECT statement? }
+\subsection{ What is the difference between UNION and UNION ALL commands? }
+\subsection{ What is the difference between DELETE and TRUNCATE statements? }
+\subsection{ What is a UNIQUE constraint?   }
+\section{Python}
+\subsection{ Python as an object-oriented programming language. Functions isinstance( ), type( ) }
+Python is an object-oriented programming language, which means that in Python, everything is an object. This includes functions, integers, strings, lists, dictionaries, etc. An object has properties and methods, which are like variables and functions, respectively, associated with the object.
+
+The isinstance() function is used to determine if an object is an instance of a certain class or a subclass of that class. This is useful in testing the type of an object in a program. Here's an example:
+
+\begin{lstlisting}[language=Python, frame=single]
+def add_numbers(a, b):
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return a + b
+    return "Inputs must be numbers"
+
+print(add_numbers(2, 3)) # 5
+print(add_numbers(2, "3")) # "Inputs must be numbers"
+\end{lstlisting}
+The type() function is used to determine the type of an object. This is useful in determining the class of an object in a program. Here's an example:
+
+\begin{lstlisting}[language=Python, frame=single]
+def add_numbers(a, b):
+    if type(a) == int and type(b) == int:
+        return a + b
+    return "Inputs must be integers"
+
+
+print(add_numbers(2, 3)) # 5
+print(add_numbers(2, "3")) # "Inputs 
+must be integers"
+\end{lstlisting}
+These functions are useful when working with objects in Python, as they allow you to determine the type of an object and ensure that the inputs to your functions are the correct types.
+
+\subsection{ Python basic data types: numbers, strings, booleans, tuples, lists, dictionaries, sets. Basic methods and properties of basic data structures: iterable, ordered, mutable, hashable, etc. }
+
+section{Python basic data types}
+
+In Python, there are several basic data types that are used to store data and information. These include:
+
+\begin{itemize}
+\item Numbers: This includes integers and floating-point numbers, which are used to store numerical values.
+\item Strings: This includes sequences of characters, which are used to store text data. Strings are ordered and iterable, and support various methods for manipulating and transforming the data.
+\item Booleans: This is a data type that can only take two values: \texttt{True} or \texttt{False}. Booleans are commonly used in conditional statements to make decisions in a program.
+\item Tuples: This is an immutable ordered collection of elements. Once a tuple is created, its elements cannot be changed.
+\item Lists: This is a mutable ordered collection of elements. Lists are similar to tuples, but elements can be added, removed, or modified after the list is created.
+\item Dictionaries: This is a collection of key-value pairs, where each key is unique and maps to a value. Dictionaries are unordered, but are efficient for fast lookups of values based on keys.
+\item Sets: This is an unordered collection of unique elements. Sets are useful for operations like union, intersection, and difference.
+\end{itemize}
+
+Each of these data types has its own properties and methods. For example:
+
+\begin{itemize}
+\item The \texttt{len()} function returns the number of elements in a collection.
+\item The \texttt{sorted()} function returns a sorted version of a collection.
+\item The \texttt{in} operator is used to check if an element is in a collection.
+\item The \texttt{+=} operator is used to concatenate or append elements to a collection.
+\end{itemize}
+
+Additionally, some data types are iterable, meaning that you can loop over their elements one by one, ordered, meaning that their elements have a defined order, mutable, meaning that their elements can be changed, and hashable, meaning that they can be used as keys in dictionaries.
+
+Here's an example of how you can use these data types and their properties in a program:
+
+\begin{lstlisting}[language=Python, frame=single]
+# Create a list
+numbers = [1, 2, 3, 4, 5]
+
+# Use the len() function
+print(len(numbers)) # 5
+
+# Use the sorted() function
+print(sorted(numbers)) # [1, 2, 3, 4, 5]
+
+# Use the in operator
+print(3 in numbers) # True
+print(6 in numbers) # False
+
+# Use the += operator
+numbers += [6, 7, 8]
+print(numbers) # [1, 2, 3, 4, 5, 6, 7, 8]
+
+# Create a tuple
+person = ("John", "Doe", 32)
+
+# Use the index operator
+print(person[0]) # "John"
+
+# Create a dictionary
+person = {"first_name": "John", "last_name": "Doe", "age":40}
+\end{lstlisting}
+
+It's important to note that the basic data types in Python are not limited to the examples shown here. There are many more properties and methods associated with each data type, and you can even define your own custom data types using classes.
+
+In conclusion, the basic data types in Python form the foundation for storing and manipulating data in your programs. Understanding these data types and their properties and methods is essential for building efficient and effective programs in Python.
+\subsection{ Loops: for loop and while loop. Why using loops in Python might not be the best idea? }
+In Python, there are two types of loops that are commonly used to execute a set of statements multiple times: the for loop and the while loop.
+
+The for loop is used to iterate over a sequence (such as a list, tuple, or string) and execute a block of code for each item in the sequence. For example:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using the for loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+print(fruit)
+\end{lstlisting}
+
+The while loop is used to execute a block of code repeatedly as long as a given condition is true. For example:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using the while loop
+count = 1
+while count <= 5:
+print(count)
+count += 1
+\end{lstlisting}
+
+While loops and for loops can be useful for solving certain problems, it's important to note that using loops can lead to inefficiencies in your code, especially if the loop runs many times. This can result in long execution times and high memory usage, which can make your program slow and difficult to scale.
+
+Therefore, it's often a good idea to avoid using loops when possible and instead use built-in functions and libraries that can perform the same operations more efficiently. Additionally, using list comprehensions and generator expressions can help you write cleaner and more efficient code, as they allow you to perform operations on collections of data without having to write explicit loops.
+
+For example, instead of using a loop to compute the squares of a list of numbers, you can use a list comprehension:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using a list comprehension
+numbers = [1, 2, 3, 4, 5]
+squared = [num**2 for num in numbers]
+print(squared) # [1, 4, 9, 16, 25]
+\end{lstlisting}
+\subsection{ List, set, dictionary comprehensions. Iterators and generators }
+List comprehensions, set comprehensions, and dictionary comprehensions are a compact and efficient way to create new collections based on existing collections in Python. They provide a concise syntax for transforming data and can be used as a substitute for traditional loops.
+
+A list comprehension consists of an expression followed by a for clause, and optionally one or more if clauses. The expression defines the transformation to be performed on each element in the collection, and the for clause specifies the collection to be transformed. For example:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using a list comprehension
+numbers = [1, 2, 3, 4, 5]
+squared = [num**2 for num in numbers]
+print(squared) # [1, 4, 9, 16, 25]
+\end{lstlisting}
+
+A set comprehension is similar to a list comprehension, but instead of creating a list, it creates a set. For example:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using a set comprehension
+numbers = [1, 2, 3, 4, 5]
+squared_set = {num**2 for num in numbers}
+print(squared_set) # {1, 4, 9, 16, 25}
+\end{lstlisting}
+
+A dictionary comprehension consists of an expression followed by a for clause and a key: value clause. The expression defines the transformation to be performed on each key-value pair in the collection, and the for clause specifies the collection to be transformed. For example:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using a dictionary comprehension
+numbers = [1, 2, 3, 4, 5]
+squared_dict = {num: num**2 for num in numbers}
+print(squared_dict) # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+\end{lstlisting}
+
+Iterators and generators are a powerful way to represent sequences of values that can be iterated over one at a time. An iterator is an object that implements the iter method, which returns an object that implements the next method. A generator is a special type of iterator that uses a function to generate its values on the fly, instead of storing them in memory.
+
+For example, the following generator function generates the squares of the numbers from 0 to 4:
+
+\begin{lstlisting}[language=Python, frame=single]
+
+Using a generator function
+def squares(n):
+for i in range(n):
+yield i**2
+
+gen = squares(5)
+for num in gen:
+print(num) # 0, 1, 4, 9, 16
+\end{lstlisting}
+
+Iterators and generators provide a flexible and efficient way to represent sequences of values, and are often used to process large amounts of data, as they allow you to generate values one at a time, without having to store all of the values in memory at once.
+
+The yield keyword is used in Python to define a generator function. A generator function is a special type of function that returns an iterator, which can be used to generate a sequence of values.
+
+The yield keyword is used to return a value from the generator function and pause its execution. The next time the generator function is called, it will resume from where it left off and continue to execute until it encounters another yield statement or reaches the end of the function.
+
+For example, consider the following generator function:
+
+\begin{lstlisting}[language=Python, frame=single]
+def squares(n):
+for i in range(n):
+yield i**2
+
+gen = squares(5)
+for num in gen:
+print(num) # 0, 1, 4, 9, 16
+\end{lstlisting}
+
+In this example, the generator function squares takes an argument n and returns a generator that generates the squares of the numbers from 0 to n-1. When the generator function is called, it starts executing and returns the first value generated by the yield statement. The function's execution is then paused and the control is returned to the caller. The next time the generator is called, it resumes its execution from where it left off, and continues to execute until it encounters another yield statement or reaches the end of the function. This process continues until all values have been generated.
+
+The yield keyword is an important concept in Python and provides a flexible and efficient way to generate sequences of values, especially when dealing with large amounts of data.
+
+
+
+
+\subsection{ Functions in Python. Function as an object. Lambda functions }
+In Python, a function is a block of code that can be executed repeatedly. Functions are defined using the def keyword, followed by the function name and a set of parentheses that contain the function's arguments. The code inside the function is indented, and the function is terminated with the return keyword.
+
+For example, consider the following function that takes two arguments a and b and returns their sum:
+
+\begin{lstlisting}[language=Python, frame=single]
+def add(a, b):
+return a + b
+
+result = add(2, 3)
+print(result) # 5
+\end{lstlisting}
+
+Functions in Python are first-class objects, which means they can be assigned to variables, passed as arguments to other functions, and returned as values from functions.
+
+Lambda functions, also known as anonymous functions, are a concise way to create small, one-line functions in Python. They are defined using the lambda keyword, followed by a set of parentheses that contain the function's arguments, a colon, and the function's return value.
+
+For example, the following lambda function takes two arguments a and b and returns their sum:
+
+\begin{lstlisting}[language=Python, frame=single]
+add = lambda a, b: a + b
+
+result = add(2, 3)
+print(result) # 5
+\end{lstlisting}
+
+Lambda functions are often used as arguments to higher-order functions, such as map, filter, and reduce. They provide a convenient and concise way to write simple functions that can be passed as arguments to other functions.
+
+\subsection{ Basic principles of OOP: encapsulation, polymorphism, inheritance. Magical methods. }
+Object-Oriented Programming (OOP) is a programming paradigm that uses objects, which are instances of classes, to represent real-world concepts and to model the data and behavior of the system.
+
+The basic principles of OOP are:
+
+Encapsulation: This refers to the idea of wrapping data and behavior within a single unit or object. In OOP, an object's data is hidden from the outside world, and can only be accessed through the object's methods. This helps to ensure the consistency and integrity of the object's data.
+
+Polymorphism: This refers to the ability of objects of different classes to respond to the same method call in different ways. In Python, polymorphism is achieved through method overloading and method overriding.
+
+Inheritance: This refers to the ability of a new class to inherit the properties and behaviors of an existing class. The new class is called a subclass, and the existing class is called a superclass. Inheritance allows for the creation of new classes that are specialized versions of existing classes.
+
+In Python, magic methods are special methods that have double underscores at the beginning and end of their names. Magic methods provide a way to customize the behavior of objects, such as the way they are compared, displayed, and manipulated.
+
+For example, consider the following class definition that implements a simple point object:
+
+\begin{lstlisting}[language=Python, frame=single]
+class Point:
+def init(self, x, y):
+self.x = x
+self.y = y
+
+python
+Copy code
+def __str__(self):
+    return f"({self.x}, {self.y})"
+p = Point(2, 3)
+print(p) # (2, 3)
+\end{lstlisting}
+
+In this example, the $__init__$ magic method is used to initialize the object's attributes, and the $__str__$ magic method is used to return a human-readable string representation of the object.
+
+These basic principles and concepts of OOP provide a powerful and flexible way to organize and structure code in Python, making it easier to create and maintain complex systems.
+
+self is a reference to the current instance of a class, and is used to access the attributes and methods of an object. In Python, self is the first argument that must be passed to any method defined within a class.
+
+For example, consider the following class definition that implements a simple point object:
+
+\begin{lstlisting}[language=Python, frame=single]
+class Point:
+def init(self, x, y):
+self.x = x
+self.y = y
+
+python
+Copy code
+def __str__(self):
+    return f"({self.x}, {self.y})"
+p = Point(2, 3)
+print(p) # (2, 3)
+\end{lstlisting}
+
+In this example, the self argument is used to access the object's x and y attributes, and to return a string representation of the object. By convention, self is usually the first argument in any method defined within a class, and it is mandatory to include it when calling the method.
+
+The use of self allows objects of a class to maintain their own state and behavior, and provides a way to access and manipulate the object's data from within the object's methods. This is one of the fundamental concepts of Object-Oriented Programming (OOP), and it helps to ensure the separation of concerns and the encapsulation of data within objects.
+
+\subsection{ O(n) notation. Search / insert / delete arrays in Python. Hash tables.   }
+The O(n) notation is a way to describe the growth rate of an algorithm's running time with respect to the size of its input. The n in O(n) refers to the size of the input, and the O symbol is used to indicate that the running time grows linearly with n.
+
+For example, consider an algorithm that processes each item in a list of n items, one by one. The running time of this algorithm would be proportional to n, so it would be described as having a running time of O(n).
+
+In Python, lists and arrays can be used to implement basic data structures for searching, inserting, and deleting elements. However, the running times of these operations can be slow for large inputs, especially when the list needs to be sorted or reallocated in memory to accommodate new elements.
+
+A hash table is a more efficient data structure for implementing the same operations, because it uses a hash function to map elements to indices in an array, allowing constant-time access to elements. When implemented correctly, the running times of hash table operations are usually O(1), meaning that they take a constant amount of time, regardless of the size of the input.
+
+However, hash tables also have some disadvantages, such as the need to handle collisions (when two elements are mapped to the same index), and the need to choose a good hash function to ensure an even distribution of elements in the array.
+
+In conclusion, choosing the right data structure is important for optimizing the performance of your code, and understanding the trade-offs between different data structures, such as arrays and hash tables, is an important aspect of algorithmic design and software engineering.
+
+\section{Machine Learning}
+\subsection{ Supervised vs. unsupervised learning }
+Supervised learning is a type of machine learning where the model is trained on a labeled dataset, where the desired output is already known. The model is trained to predict the output values based on the input features. The main goal of supervised learning is to learn a mapping function $f: X \rightarrow Y$ where X is the input feature space and Y is the output space.
+
+Unsupervised learning, on the other hand, is a type of machine learning where the model is trained on an unlabeled dataset, and the goal is to find patterns and relationships in the data without any prior knowledge of the output. The main goal of unsupervised learning is to learn the structure of the data and to identify meaningful patterns and groups in it.
+
+In summary, supervised learning requires labeled data and tries to predict an output given an input, while unsupervised learning works with unlabeled data and tries to find patterns and structure in the data.
+\subsection{ Deep learning and reinforcement learning }
+Deep learning is a subfield of machine learning that is inspired by the structure and function of the brain, known as artificial neural networks. It involves training artificial neural networks with multiple hidden layers on large amounts of data. Deep learning has achieved state-of-the-art performance on a variety of tasks, such as image and speech recognition, natural language processing, and others.
+
+Reinforcement learning is a type of machine learning where the model learns to make decisions by taking actions in an environment to maximize a reward signal. The model interacts with the environment by taking actions, observing the resulting state, and receiving a reward. Based on this feedback, the model updates its policy to make better decisions in the future. Reinforcement learning has been successfully applied in fields such as gaming, robotics, and autonomous control.
+
+In summary, deep learning is a subfield of machine learning that uses deep neural networks to learn from data, while reinforcement learning is a type of machine learning that focuses on decision-making by taking actions in an environment to maximize a reward signal.
+\subsection{ Evaluating ML algorithm performance: generalization and overfitting }
+Evaluating the performance of a machine learning algorithm is crucial in determining its effectiveness and reliability. Two important concepts in evaluating the performance of a machine learning algorithm are generalization and overfitting.
+
+Generalization refers to the ability of a machine learning model to make accurate predictions on new, unseen data. The goal of a machine learning model is to generalize well, which means that it should be able to make accurate predictions on data that it has not seen before. A model that generalizes well has a low prediction error on new data.
+
+Overfitting occurs when a machine learning model is too complex and fits the training data too well, capturing not only the true underlying relationships in the data but also the noise. As a result, the model is not able to generalize well and performs poorly on new, unseen data. Overfitting can be prevented by using simpler models, regularization techniques, and/or by using a larger training dataset.
+
+In summary, generalization refers to the ability of a machine learning model to make accurate predictions on new, unseen data, while overfitting occurs when a model is too complex and fits the training data too well, leading to poor performance on new data. Evaluating the performance of a machine learning algorithm should take into account both generalization and overfitting to ensure that the model is effective and reliable.
+\subsection{ Penalized regression }
+Penalized regression is a type of regression analysis that adds a penalty term to the loss function to reduce the complexity of the model and prevent overfitting. The goal of penalized regression is to find a balance between fitting the training data well and having a simple and interpretable model.
+
+The most common forms of penalized regression are Ridge Regression and Lasso Regression. In Ridge Regression, the penalty term is the L2-norm of the coefficients, which adds a penalty proportional to the magnitude of the coefficients. In Lasso Regression, the penalty term is the L1-norm of the coefficients, which has the effect of setting some coefficients to zero, effectively performing feature selection.
+
+Penalized regression can be seen as a trade-off between goodness-of-fit and model simplicity. By adding a penalty term to the loss function, penalized regression tries to find a solution that is both a good fit to the training data and has a simple and interpretable model structure.
+
+In summary, penalized regression is a type of regression analysis that adds a penalty term to the loss function to reduce the complexity of the model and prevent overfitting. The most common forms of penalized regression are Ridge Regression and Lasso Regression, which balance the goodness-of-fit and model simplicity.
+
+Notes:
+
+Lasso Regression and Ridge Regression are both forms of penalized regression that add a penalty term to the loss function to prevent overfitting.
+
+The loss function in Lasso Regression is given by:
+
+$$ J(\beta) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \beta^T x_i)^2 + \lambda \sum_{j=1}^{p} |\beta_j| $$
+
+where $y_i$ is the target value for the i-th sample, $\beta^T x_i$ is the predicted value for the i-th sample, $N$ is the number of samples, $p$ is the number of features, $\beta_j$ is the j-th coefficient, and $\lambda$ is a tuning parameter that controls the amount of regularization. The penalty term is the L1-norm of the coefficients, which has the effect of setting some coefficients to zero and performing feature selection.
+
+The loss function in Ridge Regression is given by:
+
+$$ J(\beta) = \frac{1}{N} \sum_{i=1}^{N} (y_i - \beta^T x_i)^2 + \lambda \sum_{j=1}^{p} \beta_j^2 $$
+
+where the only difference with the Lasso Regression loss function is that the penalty term is the L2-norm of the coefficients, which adds a penalty proportional to the magnitude of the coefficients.
+
+The L1-norm, also known as the Manhattan distance or the taxicab norm, is defined as:
+
+$$ \left| x \right|1 = \sum{i=1}^{n} |x_i| $$
+
+where $x$ is a vector and $x_i$ is the i-th element of the vector.
+
+The L2-norm, also known as the Euclidean distance, is defined as:
+
+$$ \left| x \right|2 = \sqrt{\sum{i=1}^{n} x_i^2} $$
+
+where $x$ is a vector and $x_i$ is the i-th element of the vector.
+
+In summary, Lasso Regression and Ridge Regression are forms of penalized regression that add a penalty term to the loss function to prevent overfitting. The penalty term in Lasso Regression is the L1-norm of the coefficients, while the penalty term in Ridge Regression is the L2-norm of the coefficients. The L1-norm is the sum of the absolute values of the elements of a vector, while the L2-norm is the square root of the sum of the squares of the elements of a vector.
+
+
+
+
+
+\subsection{ Support vector machine }
+Support Vector Machines (SVMs) is a type of supervised learning algorithm for classification and regression tasks. It is based on the idea of finding the maximum margin hyperplane that separates the data into different classes.
+
+In the case of a two-class problem, the goal of SVM is to find the hyperplane with the largest margin between the two classes. The margin is defined as the distance between the hyperplane and the closest data points, also known as support vectors. These support vectors determine the position and orientation of the hyperplane, hence the name Support Vector Machines.
+
+The optimization problem in SVM can be expressed as follows:
+
+$$\min_{\beta, \beta_0} \frac{1}{2} \left| \beta \right|^2 + C \sum_{i=1}^{N} \xi_i$$
+
+subject to
+
+$$y_i (\beta^T x_i + \beta_0) \geq 1 - \xi_i$$
+
+$$\xi_i \geq 0$$
+
+where $\beta$ and $\beta_0$ are the parameters of the hyperplane, $C$ is a regularization parameter that controls the trade-off between maximizing the margin and minimizing the classification error, $y_i$ is the class label for the i-th sample, $x_i$ is the i-th feature vector, and $\xi_i$ is the slack variable that allows for misclassified points.
+
+SVMs can also be used for regression by replacing the hinge loss with the squared error loss. In addition, SVMs can handle non-linearly separable data by transforming the data into a higher-dimensional space through the use of kernel functions.
+
+In summary, Support Vector Machines (SVMs) is a type of supervised learning algorithm for classification and regression tasks. It finds the maximum margin hyperplane that separates the data into different classes, with the support vectors determining the position and orientation of the hyperplane. SVMs can handle non-linearly separable data through the use of kernel functions.
+
+
+\subsection{ K-nearest neighbor (KNN) }
+K-Nearest Neighbors (KNN) is a type of instance-based, or lazy, learning algorithm for classification and regression tasks. It is based on the idea of assigning a new data point to the class or value of its closest neighbors in the feature space.
+
+The K in KNN represents the number of nearest neighbors used to make a prediction. For each new data point, the algorithm finds the K nearest points in the training data and aggregates their class labels or values to make a prediction. The most common aggregation method is to take a majority vote for classification or to take the average for regression.
+
+The algorithm does not learn a model or make any assumptions about the distribution of the data. Instead, it stores the entire training data and makes predictions at run-time based on the proximity of new data points to the stored training data.
+
+The prediction process in KNN can be formalized as follows:
+
+Calculate the distance between the new data point and all training data points
+Find the K nearest neighbors based on the distance metric
+Assign the class label or value based on a majority vote or average of the K nearest neighbors
+KNN has several important parameters, including the number of neighbors (K), the distance metric, and the weighting scheme. The choice of these parameters can affect the performance of the algorithm, so they should be carefully chosen through cross-validation or other performance evaluation techniques.
+
+In summary, K-Nearest Neighbors (KNN) is a type of instance-based learning algorithm for classification and regression tasks. It makes predictions based on the proximity of new data points to the stored training data. The algorithm does not learn a model or make any assumptions about the data distribution, and the choice of parameters can affect its performance.
+
+
+The prediction process in KNN can be expressed mathematically as follows:
+
+Let $\mathbf{X} = \left{ \mathbf{x_1}, \mathbf{x_2}, \dots, \mathbf{x_N} \right}$ be the set of training data points with $\mathbf{x_i} \in \mathbb{R}^d$ and $y_i$ be the corresponding class labels or values. For a new data point $\mathbf{x}$, the KNN algorithm calculates the distances between $\mathbf{x}$ and all $\mathbf{x_i}$ using a distance metric $d(\mathbf{x}, \mathbf{x_i})$, and finds the K nearest neighbors $\mathbf{x_{i1}}, \mathbf{x_{i2}}, \dots, \mathbf{x_{iK}}$ based on the distances. The prediction for $\mathbf{x}$ is then given by:
+
+For Classification:
+
+$$\hat{y} = \text{majority} \left{ y_{i1}, y_{i2}, \dots, y_{iK} \right}$$
+
+For Regression:
+
+$$\hat{y} = \frac{1}{K} \sum_{j=1}^{K} y_{ij}$$
+
+The complexity of the KNN algorithm is primarily determined by the distance calculations and the search for the nearest neighbors. The time complexity of finding the K nearest neighbors depends on the data structure used to store the training data, with the most common approach being a brute-force search that takes $O(Nd)$ time for each new data point, where N is the number of training data points and d is the dimensionality of the feature space.
+
+In summary, the KNN algorithm predicts the class label or value for a new data point based on the majority vote or average of the K nearest neighbors. The complexity of the algorithm is determined by the distance calculations and the search for the nearest neighbors, with a brute-force search taking $O(Nd)$ time for each new data point.
+
+
+
+
+\subsection{ Classification and regression tree (CART) }
+Classification and Regression Tree (CART) is a type of decision tree algorithm used for both classification and regression tasks. It is a supervised machine learning algorithm that builds a tree-based model to make predictions.
+
+The basic idea behind CART is to recursively split the feature space into smaller regions that contain similar class labels or values, and to make predictions based on the majority class or average value within each region. The algorithm starts with the entire feature space as the root node and splits it into two or more child nodes based on the best split that maximizes a criterion such as information gain or Gini impurity. The process is repeated for each child node until a stopping criterion is reached, such as a minimum number of samples in a leaf node or a maximum tree depth.
+
+The final tree consists of a set of internal nodes that represent the splits and leaf nodes that represent the final regions. For each new data point, the algorithm traverses the tree from the root node to a leaf node and makes a prediction based on the majority class or average value in that region.
+
+The prediction process in CART can be formalized as follows:
+
+Start at the root node of the tree
+Follow the split at the current node based on the value of the relevant feature for the new data point
+Repeat step 2 until a leaf node is reached
+Make a prediction based on the majority class or average value in the leaf node
+CART has several important parameters, including the criterion for splitting, the stopping criterion, and the method for handling missing values or outliers. The choice of these parameters can affect the performance of the algorithm, so they should be carefully chosen through cross-validation or other performance evaluation techniques.
+
+In summary, Classification and Regression Tree (CART) is a decision tree algorithm used for both classification and regression tasks. It builds a tree-based model by recursively splitting the feature space into smaller regions based on a criterion such as information gain or Gini impurity. The algorithm makes predictions based on the majority class or average value in the leaf nodes, and the choice of parameters can affect its performance.
+
+Consider a binary classification problem with a two-dimensional feature space and two classes, $C_1$ and $C_2$. Let $\mathbf{X} = \left{ \mathbf{x_1}, \mathbf{x_2}, \dots, \mathbf{x_N} \right}$ be the set of training data points with $\mathbf{x_i} = [x_{i,1}, x_{i,2}]^T$ and $y_i \in \left{ C_1, C_2 \right}$ be the corresponding class labels. A simple example of a CART tree for this problem is shown below:
+
+At the root node, the algorithm calculates the best split based on a criterion such as information gain or Gini impurity. For example, if the criterion is information gain, the split is chosen as the one that maximizes the following equation:
+
+$$\text{Information Gain} = \text{Entropy}(T) - \sum_{j=1}^{m} \frac{N_j}{N} \text{Entropy}(T_j)$$
+
+where $T$ is the root node, $T_j$ is the $j^{th}$ child node, $m$ is the number of child nodes, $N$ is the number of samples in $T$, and $N_j$ is the number of samples in $T_j$. The entropy is calculated as:
+
+$$\text{Entropy}(T) = - \sum_{k=1}^{c} p_k \log_2 p_k$$
+
+where $c$ is the number of classes, and $p_k$ is the proportion of samples in $T$ that belong to class $k$.
+
+For the example CART tree above, the splits are based on the values of the two features, $x_{1}$ and $x_{2}$. For example, the split at the root node could be based on the value of $x_{1}$, with a threshold of 0.5, such that samples with $x_{1} < 0.5$ are sent to the left child node and samples with $x_{1} \ge 0.5$ are sent to the right child node. The splits at the child nodes could be based on the value of $x_{2}$, and so on.
+
+Once the tree is built, the prediction for a new data point $\mathbf{x}$ is made by traversing the tree from the root node to a leaf node based on the values of the relevant features. For example, for the data point $\mathbf{x} = [0.2, 0.8]^T$, the algorithm would follow the path [Root] $\to$ [Split 1] $\to$ [Leaf 1] and make a prediction based on the majority class or average value in that region.
+
+In summary, the CART algorithm builds a tree-based model by recursively splitting the feature space into smaller regions based on a criterion such as information gain or Gini impurity. The splits are based on the values of the relevant features, and the predictions are made based on the majority class or average value in the
+corresponding region defined by the tree. The CART algorithm can handle both continuous and categorical variables, and is widely used for both classification and regression problems. The complexity of the CART algorithm is typically linear with respect to the number of samples and the number of features, making it a relatively efficient algorithm for small to medium-sized datasets. However, for very large datasets, more sophisticated algorithms such as random forests or gradient boosting may be preferred due to their ability to handle large amounts of data more efficiently.
+
+
+
+
+
+
+\subsection{ Clustering: K-mean, hierarchical, agglomerative, divisive }
+
+Clustering is a type of unsupervised learning that groups similar data points together into clusters. There are several different algorithms for clustering, including K-means, hierarchical, agglomerative, and divisive.
+
+K-means is one of the most widely used clustering algorithms and is based on the idea of partitioning the data into $K$ clusters, where $K$ is a user-defined parameter. The algorithm starts by randomly initializing $K$ cluster centroids and then assigns each data point to the closest centroid. The centroids are then recomputed as the mean of all data points assigned to that cluster, and the data points are re-assigned to the closest centroid. These two steps are repeated until the cluster assignments no longer change or a maximum number of iterations is reached.
+
+Hierarchical clustering is another popular clustering method that creates a hierarchy of clusters, starting with each data point as a single-point cluster and then merging or splitting clusters based on some criterion, such as distance between clusters. There are two main types of hierarchical clustering: agglomerative and divisive. In agglomerative clustering, the algorithm starts with individual data points and then merges clusters into larger clusters until a stopping criterion is reached. In divisive clustering, the algorithm starts with all data points in a single cluster and then splits the cluster into smaller clusters until a stopping criterion is reached.
+
+The choice of clustering algorithm depends on the nature of the data and the desired properties of the clusters. For example, K-means is a fast and efficient algorithm for large datasets, but is sensitive to initial conditions and may produce suboptimal solutions. Hierarchical clustering is more flexible and can handle non-linear relationships, but can be slower and more computationally intensive.
+
+The objective function for K-means clustering is to minimize the sum of squared distances between each data point and its assigned cluster centroid:
+
+$$ J = \sum_{i=1}^K \sum_{x \in C_i} ||x - \mu_i||^2 $$
+
+where $K$ is the number of clusters, $C_i$ is the set of data points assigned to cluster $i$, $\mu_i$ is the centroid of cluster $i$, and $||x - \mu_i||^2$ is the squared Euclidean distance between data point $x$ and centroid $\mu_i$.
+
+In hierarchical clustering, the objective is to create a tree structure that summarizes the relationships between data points. One popular method for defining the tree structure is based on single linkage, where the distance between two clusters is defined as the minimum distance between any two data points in the two clusters. Another popular method is based on complete linkage, where the distance between two clusters is defined as the maximum distance between any two data points in the two clusters.
+
+$$ d(C_i, C_j) = \min_{x \in C_i, y \in C_j} ||x - y|| $$
+
+or
+
+$$ d(C_i, C_j) = \max_{x \in C_i, y \in C_j} ||x - y|| $$
+
+where $d(C_i, C_j)$ is the distance between clusters $C_i$ and $C_j$, and $||x - y||$ is the Euclidean distance between data points $x$ and $y$.
+
+In agglomerative hierarchical clustering, the objective is to iteratively merge the two closest clusters until all data points are in a single cluster or a stopping criterion is reached. The merging process can be formalized as finding a pair of clusters $(C_i, C_j)$ such that the distance $d(C_i, C_j)$ is minimized:
+
+$$ (C_i, C_j) = \arg \min_{C_p, C_q} d(C_p, C_q) $$
+
+where $d(C_p, C_q)$ is the distance between clusters $C_p$ and $C_q$, as defined by either single linkage or complete linkage.
+
+In divisive hierarchical clustering, the objective is to iteratively split the largest cluster into two smaller clusters until each data point is in its own cluster or a stopping criterion is reached. The splitting process can be formalized as finding a cluster $C_i$ and a threshold value $t$ such that the sum of squared distances between each data point and its assigned centroid is minimized:
+
+$$ (C_i, t) = \arg \min_{C_p, t} \sum_{x \in C_p} ||x - \mu_{C_p}||^2 $$
+
+where $\mu_{C_p}$ is the centroid of cluster $C_p$. The data points in cluster $C_p$ are then split into two new clusters based on their distances to $\mu_{C_p}$ relative to the threshold value $t$.
+\subsection{ Neural networks  }
+\subsubsection{Bla-bla-bla } 
+Neural networks are a type of machine learning algorithm inspired by the structure and function of the human brain. They consist of interconnected nodes or artificial neurons, which are organized into layers. The input layer receives the raw data, and the output layer produces the predictions. The intermediate layers, known as hidden layers, perform transformations on the input data to generate intermediate representations that can capture complex relationships between the inputs and outputs.
+
+Each artificial neuron in a neural network takes in a set of inputs, applies a weighted sum to the inputs, and passes the result through an activation function. The activation function determines the output of the neuron and can be used to introduce non-linearity into the network.
+
+There are several different types of neural networks, including feedforward neural networks, recurrent neural networks, and convolutional neural networks. They can be used for various tasks, including classification, regression, and image recognition.
+
+One common technique for training a neural network is backpropagation, which involves adjusting the weights of the network to minimize the difference between the predicted outputs and the true outputs. This is done by computing the gradient of the loss function with respect to the weights and updating the weights in the direction of the negative gradient.
+\subsubsection{backpropagation}
+Backpropagation is an algorithm for training neural networks that uses gradient descent to minimize a loss function. The goal of backpropagation is to find the optimal weights for the network such that the difference between the predicted outputs and the true outputs is minimized.
+
+Backpropagation works by computing the gradient of the loss function with respect to the weights of the network, and then updating the weights in the direction of the negative gradient. The gradient computation is performed using the chain rule of calculus, which allows the gradient of the loss function with respect to the weights to be computed by recursively applying the chain rule to each layer of the network.
+
+The basic steps of backpropagation are as follows:
+
+Feedforward: The input data is fed into the network, and the activations of each layer are computed.
+
+Loss computation: The loss function is computed based on the difference between the predicted outputs and the true outputs.
+
+Backpropagation: The gradient of the loss function with respect to the weights of the network is computed using the chain rule.
+
+Weight update: The weights are updated in the direction of the negative gradient, using a learning rate to control the size of the update.
+
+Here is a mathematical example to illustrate the backpropagation algorithm. Let's consider a neural network with a single hidden layer and a single output neuron. The input to the network is a vector $x \in \mathbb{R}^n$, the weights connecting the input layer to the hidden layer are represented by a matrix $W_1 \in \mathbb{R}^{m \times n}$, the weights connecting the hidden layer to the output layer are represented by a vector $W_2 \in \mathbb{R}^m$, and the activation function is the sigmoid function $\sigma(z) = \frac{1}{1 + e^{-z}}$.
+
+The activations of the hidden layer and the output layer are computed as follows:
+
+$$ a_1 = \sigma(W_1x) $$
+$$ a_2 = \sigma(W_2a_1) $$
+
+The loss function is given by a mean squared error (MSE) between the predicted output $a_2$ and the true output $y$:
+
+$$ L = \frac{1}{2} ||a_2 - y||^2 $$
+
+The gradient of the loss function with respect to the weights can be computed using the chain rule:
+
+$$ \frac{\partial L}{\partial W_2} = (a_2 - y) \odot a_1 \odot (1 - a_1) $$
+$$ \frac{\partial L}{\partial W_1} = (a_2 - y) \odot W_2 \odot (1 - a_1) \odot a_1 \odot x $$
+
+where $\odot$ denotes element-wise multiplication.
+
+Finally, the weights are updated in the direction of the negative gradient:
+
+$$ W_2 = W_2 - \alpha \frac{\partial L}{\partial W_2} $$
+$$ W_1 = W_1 - \alpha \frac{\partial L}{\partial W_1} $$
+
+where $\alpha$ is the learning rate. This process is repeated for multiple iterations until the loss function converges to a minimum or a stopping criterion is reached.
+\subsubsection{Activation functions }
+Activation functions are mathematical operations applied to the inputs of each neuron in a neural network to produce its output. They introduce non-linearities into the network, allowing it to learn complex relationships between the inputs and outputs.
+
+Here are some of the most widely used activation functions, along with their formulas:
+
+Sigmoid:
+$$ \sigma(z) = \frac{1}{1 + e^{-z}} $$
+
+The sigmoid activation function maps any input to the range [0, 1]. It is widely used in binary classification problems, where the output represents the probability of the positive class. The main disadvantage of the sigmoid function is that it can lead to vanishing gradients, which can make it difficult to train deep networks.
+
+Hyperbolic tangent (tanh):
+$$ \text{tanh}(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}} $$
+
+The tanh activation function maps any input to the range [-1, 1]. Like the sigmoid function, it is widely used in binary and multi-class classification problems. However, compared to the sigmoid function, the tanh function is less prone to vanishing gradients and has a faster convergence rate.
+
+Rectified linear unit (ReLU):
+$$ \text{ReLU}(z) = \max(0, z) $$
+
+The ReLU activation function maps any input to either 0 or the input value itself. It is widely used in feedforward neural networks, where it has been shown to significantly improve the training speed and accuracy compared to other activation functions. The main disadvantage of the ReLU function is that it can result in dead neurons, which can lead to reduced network performance.
+
+Leaky ReLU:
+$$ \text{Leaky ReLU}(z) = \max(0.01z, z) $$
+
+The Leaky ReLU activation function is a variant of the ReLU function that solves the problem of dead neurons. It maps any input to either a small negative value or the input value itself, ensuring that the gradient of the function is always positive.
+
+These are some of the most widely used activation functions in neural networks. The choice of activation function depends on the specific problem being solved and the characteristics of the data. Each activation function has its own advantages and disadvantages, and the best choice is often determined through experimentation and trial-and-error.
+\subsubsection{feedforward neural network }
+A feedforward neural network is a type of artificial neural network in which the information flows only in one direction, from the input layer to the output layer, without looping back. The information is processed through a series of hidden layers, each of which applies a set of weights and biases to the inputs and passes the results through an activation function to produce the outputs.
+
+The structure of a feedforward neural network can be represented as an input layer, one or more hidden layers, and an output layer. The input layer takes in the input data and passes it to the first hidden layer. Each hidden layer receives the outputs from the previous layer and processes them further to produce its own outputs, which are passed to the next hidden layer. The final hidden layer produces the outputs that are passed to the output layer, which produces the final prediction.
+
+The goal of training a feedforward neural network is to learn the weights and biases that produce the best predictions for the given data. This is typically done using a supervised learning approach, in which the network is trained using a labeled dataset and an optimization algorithm such as stochastic gradient descent. During training, the optimization algorithm adjusts the weights and biases to minimize the difference between the network's predictions and the actual values in the training data.
+
+Feedforward neural networks are widely used for various tasks, including image classification, speech recognition, natural language processing, and many others. They are particularly well-suited for problems in which the relationships between the inputs and outputs are complex and non-linear. With the ability to learn these relationships, feedforward neural networks can produce highly accurate predictions for unseen data.
+\subsubsection{RNN}
+Recurrent neural networks (RNNs) are a type of artificial neural network that are designed to handle sequential data, such as time series data, speech signals, and text. Unlike feedforward neural networks, which process information in a one-directional flow, RNNs have the ability to process inputs in a sequential manner, and to use information from previous time steps to inform the processing of current time steps. This allows RNNs to capture complex dependencies between inputs and outputs, making them well-suited for tasks such as language modeling, speech recognition, and music generation.
+
+An RNN is composed of a set of recurrent units, each of which takes as input the output of the previous time step and the current input, and produces an output for the current time step. The recurrent units are connected in a cyclic loop, allowing the network to maintain information from previous time steps and to use it to inform its processing of the current time step.
+
+The structure of an RNN can be represented as an input layer, one or more hidden layers, and an output layer. The input layer takes in the input data for a given time step, and the hidden layers process the data using a set of weights and biases and an activation function, similar to a feedforward neural network. The outputs from the hidden layers are passed to the output layer, which produces the final prediction for the current time step.
+
+The goal of training an RNN is to learn the weights and biases that produce the best predictions for a given dataset. This is typically done using a supervised learning approach, in which the network is trained using a labeled dataset and an optimization algorithm such as stochastic gradient descent. During training, the optimization algorithm adjusts the weights and biases to minimize the difference between the network's predictions and the actual values in the training data.
+
+RNNs are widely used for various tasks, including language modeling, speech recognition, and machine translation. They are particularly well-suited for problems in which the relationships between inputs and outputs are complex and depend on previous inputs and outputs. With the ability to capture these relationships, RNNs can produce highly accurate predictions for sequential data.
+\subsubsection{CNN}
+Convolutional neural networks (ConvNets or CNNs) are a type of artificial neural network designed for image classification and processing. Unlike feedforward and recurrent neural networks, which process information in a flat and sequential manner, respectively, ConvNets process information in a hierarchical and spatially organized manner. This allows ConvNets to effectively capture the spatial structure and relationships between pixels in an image, making them well-suited for image classification and other computer vision tasks.
+
+A ConvNet consists of multiple layers, including an input layer, one or more convolutional layers, one or more pooling layers, and one or more fully-connected layers. The input layer takes in the image data, and the convolutional layers use filters to scan the image and detect features such as edges, corners, and textures. The pooling layers then reduce the spatial dimensions of the feature maps, which helps to reduce the amount of computation required and to make the network more robust to small translations in the input. The fully-connected layers then use the feature maps to produce the final classification or prediction.
+
+The filters in the convolutional layers are learned during the training process, which is typically done using a supervised learning approach, in which the network is trained using a labeled dataset and an optimization algorithm such as stochastic gradient descent. During training, the optimization algorithm adjusts the filters to minimize the difference between the network's predictions and the actual labels in the training data.
+
+ConvNets are widely used for various tasks in computer vision, such as image classification, object detection, and segmentation. They have been very successful in achieving high accuracy on benchmark datasets and are widely used in industry and academia for various computer vision applications. With their ability to effectively capture the spatial structure of images, ConvNets have revolutionized the field of computer vision and have opened up new avenues for research and applications.
+\subsubsection{Diferencec in structure}
+The structure of Convolutional Neural Networks (ConvNets), Recurrent Neural Networks (RNNs), and Feedforward Neural Networks (FFNNs) are each designed to handle different types of input data and tasks.
+
+ConvNets are designed to handle image and other grid-structured data. They consist of an input layer, one or more convolutional layers, one or more pooling layers, and one or more fully-connected layers. The convolutional layers use filters to scan the image and detect features such as edges, corners, and textures. The pooling layers reduce the spatial dimensions of the feature maps and make the network more robust to small translations in the input. The fully-connected layers use the feature maps to produce the final classification or prediction.
+
+RNNs are designed to handle sequential data, such as time series, text, and speech. They consist of an input layer, one or more recurrent layers, and one or more fully-connected layers. The recurrent layers use the hidden state of the network from the previous time step to process the current input and produce the hidden state for the current time step. This allows the network to capture dependencies between the inputs across time. The fully-connected layers use the hidden state to produce the final prediction.
+
+FFNNs are designed to handle any type of input data and are the simplest type of neural network. They consist of an input layer, one or more hidden layers, and an output layer. The hidden layers use weighted connections to transform the input into a higher-level representation that is used to produce the final prediction.
+
+Here is an example of the mathematical formulation of a simple feedforward neural network:
+
+\begin{equation}
+z_1 = W_1 x + b_1 \
+a_1 = \sigma(z_1) \
+z_2 = W_2 a_1 + b_2 \
+a_2 = \sigma(z_2) \
+\cdots \
+z_n = W_n a_{n-1} + b_n \
+\hat{y} = \sigma(z_n)
+\end{equation}
+
+where $x$ is the input, $W_i$ and $b_i$ are the weights and biases of the $i$-th layer, $\sigma$ is the activation function, and $\hat{y}$ is the prediction.
+
+For a more in-depth treatment of ConvNets, RNNs, and FFNNs, including their architectures and mathematical formulations, I recommend reading the original research papers or taking a course in deep learning. Some good resources include the book "Deep Learning" by Ian Goodfellow, Yoshua Bengio, and Aaron Courville, and the online course "Deep Learning Specialization" by Andrew Ng on Coursera.
+\section{ Economics and Finance}
+\subsection{ Breakeven analysis and shutdown point }
+Breakeven analysis is a financial analysis that helps businesses determine the point at which their revenue will cover their expenses. The breakeven point is the level of sales at which a company's total revenue equals its total costs, and it is a useful tool for businesses to determine the minimum amount of sales needed to avoid losses.
+
+The formula for calculating the breakeven point is as follows:
+
+Breakeven Point = Fixed Costs / (Unit Selling Price - Variable Costs)
+
+Fixed costs are the costs that do not vary with the level of production or sales, such as rent or salaries. Variable costs are the costs that vary with the level of production or sales, such as the cost of raw materials.
+
+Once a company has determined its breakeven point, it can use this information to determine its shutdown point. The shutdown point is the level of sales below which a company would be better off shutting down its operations than continuing to operate at a loss.
+
+The shutdown point can be calculated as follows:
+
+Shutdown Point = Fixed Costs / Contribution Margin Ratio
+
+The contribution margin ratio is the difference between the selling price per unit and the variable cost per unit, divided by the selling price per unit. It represents the portion of each sale that contributes to covering the company's fixed costs.
+
+If a company's sales fall below the shutdown point, the company will be unable to cover its fixed costs, and it may be more profitable for it to shut down its operations rather than continue to operate at a loss.
+
+Breakeven analysis and the shutdown point are important tools for businesses to use in making strategic decisions, such as pricing and production decisions, and in determining the financial viability of their operations.
+\subsection{ Elasticity of demand: price, income, cross-price }
+Elasticity of demand is a measure of the responsiveness of the quantity demanded of a product or service to changes in its price, income, or the price of a related product or service. There are three main types of elasticity of demand:
+
+Price Elasticity of Demand: Price elasticity of demand measures the responsiveness of the quantity demanded of a product or service to changes in its price. It is calculated as the percentage change in quantity demanded divided by the percentage change in price. If the price elasticity of demand is greater than 1, demand is considered elastic, meaning that a change in price will have a significant impact on the quantity demanded. If the price elasticity of demand is less than 1, demand is considered inelastic, meaning that a change in price will have little impact on the quantity demanded.
+
+Income Elasticity of Demand: Income elasticity of demand measures the responsiveness of the quantity demanded of a product or service to changes in consumer income. It is calculated as the percentage change in quantity demanded divided by the percentage change in income. If the income elasticity of demand is positive, the good is considered a normal good, meaning that demand increases as income increases. If the income elasticity of demand is negative, the good is considered an inferior good, meaning that demand decreases as income increases.
+
+Cross-Price Elasticity of Demand: Cross-price elasticity of demand measures the responsiveness of the quantity demanded of a product or service to changes in the price of a related product or service. It is calculated as the percentage change in quantity demanded of the first product divided by the percentage change in the price of the second product. If the cross-price elasticity of demand is positive, the two products are considered substitutes, meaning that an increase in the price of one product will lead to an increase in the quantity demanded of the other product. If the cross-price elasticity of demand is negative, the two products are considered complements, meaning that an increase in the price of one product will lead to a decrease in the quantity demanded of the other product.
+
+Elasticity of demand is an important concept for businesses to understand when making pricing and marketing decisions. By understanding how consumers respond to changes in price, income, and the prices of related products or services, businesses can make informed decisions about how to price their products and how to market them to consumers
+\subsection{ Aggregate demand and supply }
+Aggregate Demand: Aggregate demand represents the total demand for goods and services in an economy at a given price level. It is composed of four components: consumer spending, investment spending, government spending, and net exports (exports minus imports). Aggregate demand is influenced by several factors including interest rates, taxes, government policies, and consumer and business confidence.
+
+Aggregate Supply: Aggregate supply represents the total supply of goods and services in an economy at a given price level. It is composed of two components: short-run aggregate supply and long-run aggregate supply. Short-run aggregate supply represents the total output that firms are willing and able to produce in response to changes in the price level, while long-run aggregate supply represents the potential output of an economy based on its available resources and technology. Aggregate supply is influenced by several factors including labor and capital availability, technology, and government regulations.
+
+The interaction between aggregate demand and aggregate supply determines the overall level of output and prices in an economy. If aggregate demand exceeds aggregate supply, there is upward pressure on prices and inflation may occur. Conversely, if aggregate supply exceeds aggregate demand, there is downward pressure on prices and deflation may occur.
+
+Governments and central banks can use a variety of tools to influence aggregate demand and supply in order to stabilize the economy. For example, governments may use fiscal policy (changes in government spending and taxation) to influence aggregate demand, while central banks may use monetary policy (changes in interest rates and the money supply) to influence aggregate demand and supply.
+\subsection{ Business cycles: expansion, peak, recession and trough }
+Business cycles refer to the fluctuations in economic activity over time, characterized by expansions and contractions in gross domestic product (GDP) and other economic indicators. The four stages of the business cycle are expansion, peak, recession, and trough.
+
+Expansion: An expansion, also known as a boom or recovery, is the phase of the business cycle where the economy is growing and producing more goods and services. This stage is characterized by rising employment, consumer spending, business profits, and GDP.
+
+Peak: A peak is the phase of the business cycle where the economy has reached its maximum level of growth and expansion. This stage is characterized by high levels of employment, inflation, and business profits. At this point, the economy has reached its limit and is likely to begin a downturn.
+
+Recession: A recession is the phase of the business cycle where the economy begins to contract and decline. This stage is characterized by falling employment, consumer spending, business profits, and GDP. Recession can be caused by a variety of factors, including a decrease in consumer confidence, a drop in investment, or a decline in the availability of credit.
+
+Trough: A trough is the phase of the business cycle where the economy has hit its bottom and is beginning to recover. This stage is characterized by low levels of employment, consumer spending, business profits, and GDP. The economy may begin to recover as consumer confidence increases, investment rises, and credit becomes more readily available.
+
+Business cycles are a natural part of the economy, but they can have significant impacts on businesses and individuals. During a recession, businesses may struggle to stay afloat and individuals may experience unemployment and financial hardship. Conversely, during an expansion, businesses may experience growth and profitability, and individuals may have increased job opportunities and income. Understanding the business cycle can help businesses and individuals plan for the future and prepare for potential economic downturns.
+
+\subsection{ Market structures: perfect competition, monopolistic competition, oligopoly, monopoly }
+Market structures refer to the different types of environments in which firms operate and compete with each other. The main market structures are:
+
+Perfect competition: Perfect competition is a market structure in which a large number of small firms compete with each other, selling homogeneous products at a market-determined price. In a perfectly competitive market, no single firm has any control over the market price, and firms are price takers rather than price setters.
+
+Monopolistic competition: Monopolistic competition is a market structure in which a large number of small firms compete with each other by selling slightly differentiated products. Each firm has some market power, but the market as a whole is not dominated by a single firm. Firms in this market structure can charge slightly different prices for their products based on the perceived differences in quality or other features.
+
+Oligopoly: Oligopoly is a market structure in which a small number of large firms dominate the market. These firms have significant market power and can influence the market price of their products. Due to the high barriers to entry, it is difficult for new firms to enter the market and compete with existing firms.
+
+Monopoly: Monopoly is a market structure in which a single firm dominates the market and has complete control over the supply of the product or service. This means that the firm has significant market power and can set the price at which it sells its products or services.
+
+Each market structure has its own unique characteristics, and the level of competition, pricing behavior, and product differentiation can vary greatly between them. Understanding the market structure in which a firm operates can help businesses make strategic decisions about pricing, product differentiation, and market entry.
+
+
+
+
+\subsection{ Market concentration measures: N-firm concentration ratio, Herfindahl-Hirschman Index, Gini coefficient }
+Market concentration measures are used to evaluate the level of competition in a market by measuring the degree to which a few large firms dominate the market. The most commonly used measures of market concentration are:
+
+N-firm concentration ratio: The N-firm concentration ratio measures the percentage of market share held by the N largest firms in a market. For example, a 4-firm concentration ratio of 70% means that the top four firms in the market hold 70% of the total market share.
+
+Herfindahl-Hirschman Index (HHI): The HHI is calculated by squaring the market share of each firm in the market and summing these values. The resulting number is then multiplied by 10,000. For example, a market with four firms each holding a 25% market share would have an HHI of 6,250 (25^2 + 25^2 + 25^2 + 25^2 = 2,500; 2,500 x 10,000 = 25,000).
+
+Gini coefficient: The Gini coefficient measures the degree of income inequality in a population, but it can also be used to measure market concentration. In the context of market concentration, the Gini coefficient measures the distribution of market share across firms. A Gini coefficient of 1 represents perfect market concentration, where one firm holds all the market share, while a Gini coefficient of 0 represents perfect competition, where all firms hold an equal share of the market.
+
+These measures can be used to evaluate the level of competition in a market and determine whether it is dominated by a few large firms or is more competitive with a larger number of smaller firms. A high concentration ratio, HHI or Gini coefficient indicates a less competitive market, while a low concentration ratio, HHI or Gini coefficient indicates a more competitive market.
+
+\subsection{ Examples of financial metrics }
+Financial metrics are quantitative measurements that can be used to evaluate a company's financial health, performance, and growth potential. Here are some examples of financial metrics:
+
+Revenue: This is the total amount of money a company earns from its sales.
+
+Gross Profit Margin: This is the difference between the revenue generated by a company and the cost of goods sold, expressed as a percentage of revenue.
+
+Net Income: This is the total amount of money a company has earned after deducting all expenses, including taxes.
+
+Return on Equity (ROE): This is the percentage of profit a company earns compared to the amount of shareholder equity.
+
+Debt-to-Equity Ratio: This ratio indicates the amount of debt a company has compared to its equity.
+
+Earnings per Share (EPS): This is the amount of net income earned per share of stock outstanding.
+
+Price-to-Earnings Ratio (P/E Ratio): This ratio is used to evaluate a company's stock price relative to its earnings per share.
+
+Cash Flow: This is the amount of cash a company generates from its operations, investments, and financing activities.
+
+Working Capital: This is the amount of money a company has available to fund its daily operations.
+
+Return on Investment (ROI): This is the percentage of profit earned on an investment relative to its cost.
+\subsection{ Walk me through a typical unit economics
+ }
+Unit economics refers to the analysis of the financial performance of a single unit of a business, such as one customer, one product, or one location. It helps companies understand the profitability of their business and identify areas for improvement.
+
+Here's an example of a typical unit economics analysis for a hypothetical online retailer:
+
+Revenue per Unit: The first step is to determine how much revenue the company generates from each unit, which could be a single product or a single customer. Let's say the company sells a single product for $50.
+
+Cost of Goods Sold per Unit: Next, the company needs to determine how much it costs to produce and deliver each unit of the product. For example, let's say it costs $25 to produce and ship the product.
+
+Gross Profit per Unit: The company's gross profit per unit is the difference between the revenue per unit and the cost of goods sold per unit. In this example, the gross profit per unit would be $25.
+
+Customer Acquisition Cost (CAC): To acquire a customer, the company needs to spend money on marketing and advertising. Let's say the company spends $10 on marketing to acquire a new customer.
+
+Lifetime Value of a Customer (LTV): The LTV is the total amount of revenue a company expects to generate from a single customer over the course of their relationship with the company. Let's say that the average customer purchases three units of the product over their lifetime, so the LTV would be $150 ($50 x 3).
+
+Gross Profit Margin: The gross profit margin is the percentage of revenue that is left over after subtracting the cost of goods sold. In this example, the gross profit margin would be 50% ($25 / $50).
+
+Payback Period: The payback period is the length of time it takes for the company to recoup the cost of acquiring a new customer. In this example, the payback period would be one month ($10 / $25).
+
+By analyzing these unit economics, the company can determine whether its business is profitable and identify areas for improvement. For example, if the CAC is too high relative to the LTV, the company may need to find ways to reduce its customer acquisition costs or increase its lifetime customer value.
+ 
+\section{Market Sizing}
+\subsection{ How many grocery stores are there in Moscow? }
+
+\subsection{ How many tennis balls can you stuff inside an airplane? }
+
+\subsection{ How much Earl Grey is drunk in the United Kingdom each year? }
+\subsection{ How many iPhones does Apple sell in the U.S. each year?   }
+\section{Problem Solving1}
+\subsection{ Company’s online sales were below expectations. What solutions do you suggest to analyse how to recover the lost revenue?  }
+
+
+\subsection{ A company is operating at a loss despite its revenues being high. What solutions do you suggest to analyse the possible reasons for this situation? }
+f a company is operating at a loss despite its high revenues, it indicates that the company is spending more money than it is generating in revenue. Here are some solutions to analyze the possible reasons for this situation:
+
+Review the company's financial statements: Review the company's income statement, balance sheet, and cash flow statement to gain a better understanding of its financial performance. Analyze the key financial ratios, such as gross profit margin, operating profit margin, and net profit margin, to determine where the company is losing money.
+
+Conduct a cost analysis: Conduct a cost analysis to determine where the company is overspending. Identify the fixed and variable costs associated with the company's operations, and determine whether there are any areas where costs can be reduced.
+
+Review pricing strategy: Review the company's pricing strategy to ensure that it is appropriately priced to cover its costs and generate profit.
+
+Analyze revenue streams: Analyze the company's revenue streams to determine which products or services are generating the most revenue. Determine whether there are opportunities to increase revenue from existing products or services, or to diversify into new markets.
+
+Review marketing strategy: Review the company's marketing strategy to ensure that it is effectively reaching its target audience and generating leads.
+
+Consider restructuring: If the above solutions are not effective, consider restructuring the company's operations. This may involve reducing staff, consolidating departments, or divesting non-core business units.
+
+By analyzing the possible reasons for the company's losses, the management can identify the areas that need improvement and take corrective actions to improve the company's financial performance.
+
+\subsection{ How to analyse whether we should enter a new market? }
+Entering a new market requires careful analysis to ensure that it is a viable opportunity for your business. Here are some steps you can follow to analyze whether you should enter a new market:
+
+Conduct market research: This involves collecting and analyzing data on the potential market, including the size, growth potential, competition, and consumer behavior. This information will help you determine whether there is a demand for your product or service in the new market.
+
+Assess your competition: Determine who your competitors are in the new market and evaluate their strengths and weaknesses. Identify any potential advantages you may have over them, such as unique features or a lower price point.
+
+Evaluate your resources: Consider your company's resources, including your budget, staffing, and supply chain. Determine if you have the resources necessary to successfully enter and compete in the new market.
+
+Analyze the regulatory environment: Understand the legal and regulatory requirements for entering the new market, including licensing and permits. Ensure that your business complies with all relevant laws and regulations.
+
+Develop a marketing plan: Develop a marketing plan that takes into account the unique characteristics of the new market, including cultural differences, consumer preferences, and marketing channels.
+
+Determine the financial feasibility: Analyze the potential costs and benefits of entering the new market, including the investment required, the potential revenue, and the return on investment.
+
+By following these steps, you can evaluate whether entering a new market is a viable opportunity for your business. It is important to conduct a thorough analysis before making a decision, as entering a new market involves a significant investment of time, resources, and money.
+
+
+
+
+
+\subsection{ How to analyse whether we should exit an existing market? }
+Review the market data: Collect and review data on the performance of your business in the market, including sales, revenue, profit margins, and customer feedback. Analyze the trends over time to determine whether the market is growing or declining.
+
+Assess your competition: Evaluate your competition in the market and determine whether you are able to compete effectively. Identify any advantages your competitors have over you, such as a stronger brand or lower costs.
+
+Evaluate your resources: Assess whether you have the resources necessary to continue operating in the market. Consider the costs associated with maintaining operations, such as marketing, production, and distribution.
+
+Review the regulatory environment: Evaluate the legal and regulatory environment in the market. Determine whether there are any changes in regulations that could impact your business operations.
+
+Analyze your profitability: Determine the profitability of your business in the market. Evaluate your revenue and costs to determine whether your business is profitable. If your business is not profitable, consider whether you can make changes to improve profitability.
+
+Evaluate future prospects: Analyze the future prospects of the market. Consider whether the market is likely to grow or decline in the future. If the market is likely to decline, consider exiting the market before it becomes too late.
+
+Develop an exit strategy: If you decide to exit the market, develop an exit strategy. Consider the costs associated with exiting the market, such as severance pay and inventory liquidation.
+
+By following these steps, you can evaluate whether exiting an existing market is the right decision for your business. It is important to conduct a thorough analysis before making a decision, as exiting a market can have significant consequences for your business.
+
+
+
+
+
+
+
+\subsection{ How to analyse how to price our product? }
+Pricing your product is an important part of your business strategy. Here are some steps you can follow to analyze how to price your product:
+
+Conduct market research: Conduct market research to determine the demand for your product, the price points of your competitors, and the willingness of your customers to pay. You can use surveys, focus groups, or other research methods to gather this information.
+
+Determine your costs: Determine the costs associated with producing, marketing, and selling your product. This includes direct costs such as raw materials, labor, and overhead, as well as indirect costs such as marketing expenses.
+
+Determine your pricing objectives: Determine your pricing objectives, which may include maximizing profits, increasing market share, or pricing to match or undercut your competitors.
+
+Consider pricing strategies: Consider different pricing strategies, such as cost-plus pricing, value-based pricing, or penetration pricing. Each strategy has its own advantages and disadvantages, so choose the strategy that best aligns with your pricing objectives and the market conditions.
+
+Analyze the impact of pricing on demand: Analyze the impact of pricing on demand for your product. Determine the price elasticity of demand, or how responsive customers are to changes in price. This can help you determine the optimal price point for your product.
+
+Test and adjust pricing: Test different pricing strategies and price points to determine the most effective pricing for your product. Use data and analytics to track sales and customer behavior to determine whether your pricing strategy is effective.
+
+By following these steps, you can analyze how to price your product effectively. Pricing is an ongoing process, so continue to monitor market conditions and adjust your pricing strategy as needed.
+
+\subsection{ How to analyse whether we should launch a new product? }
+Launching a new product can be a significant investment of time and resources for a company. Here are some steps you can take to analyze whether launching a new product is a viable business decision:
+
+Conduct market research: Conduct market research to determine whether there is a demand for the new product. Identify the target market, assess the competition, and determine the price points of similar products in the market.
+
+Analyze costs: Analyze the costs associated with developing and launching the new product. This includes research and development costs, manufacturing costs, marketing costs, and any other associated costs.
+
+Determine potential revenue: Estimate the potential revenue generated from the new product. This includes estimating the sales volume, pricing, and revenue over time.
+
+Conduct a SWOT analysis: Conduct a SWOT analysis to determine the strengths, weaknesses, opportunities, and threats associated with launching the new product. This can help you identify any potential challenges or risks associated with the launch.
+
+Develop a marketing plan: Develop a marketing plan for the new product to ensure that it is effectively marketed to the target audience. Identify the marketing channels, messaging, and promotional tactics that will be used to promote the new product.
+
+Test and iterate: Test the new product with a small group of customers before launching it to the broader market. This can help you identify any potential issues with the product or marketing strategy and make necessary adjustments before the official launch.
+
+By following these steps, you can analyze whether launching a new product is a viable business decision. It's important to carefully evaluate the potential costs and revenue associated with launching the new product, as well as the competition and potential demand in the market.
+
+
+
+
+\subsection{ A client of a company is a hotel located in New York. Their primary customer base is made up of mostly foreign tourists. What are some factors that these customers would seek out in a hotel? What influences may affect their decision to stay at the client's hotel?  }
+
+
+
+ \footnote{ 1 For each of the Problem Solving questions clarify input data and metrics required to make a recommendation.} 
+ Foreign tourists visiting New York may have different priorities and expectations when it comes to choosing a hotel. Here are some factors that may influence their decision to stay at your client's hotel:
+
+Location: Tourists may prioritize a hotel's location in relation to popular tourist destinations, public transportation, and amenities such as restaurants, shops, and attractions.
+
+Price: Tourists may consider the price of the hotel when making their decision, as they may have a budget to adhere to.
+
+Safety and security: Tourists may prioritize hotels that are located in safe neighborhoods and have adequate security measures.
+
+Room quality: Tourists may prioritize hotels that offer clean, comfortable, and well-equipped rooms with amenities such as Wi-Fi, air conditioning, and cable TV.
+
+Customer service: Tourists may prioritize hotels that offer friendly and helpful customer service, as they may require assistance with navigating the city or arranging transportation.
+
+Cultural familiarity: Tourists may be drawn to hotels that offer cultural familiarity, such as multilingual staff, food options, or cultural experiences.
+
+Some factors that may influence a foreign tourist's decision to stay at your client's hotel include:
+
+Reputation: Positive reviews and recommendations from friends or travel websites may influence a tourist's decision to stay at a particular hotel.
+
+Marketing and advertising: Effective marketing and advertising can help increase a hotel's visibility and attract potential customers.
+
+Brand loyalty: Tourists may have previously stayed at your client's hotel or other hotels within their chain and may choose to stay again due to their positive experiences.
+
+Online presence: Tourists may research hotels online before making a decision, so a strong online presence with positive reviews and accurate information can be influential.
+
+Events and promotions: Tourists may be attracted to hotels that offer special events or promotions, such as holiday packages or discounts for multiple nights' stays.
+
+By understanding what factors may influence a foreign tourist's decision to stay at a hotel in New York and what influences may affect their decision to stay at your client's hotel, your company can provide recommendations to help increase bookings and improve the overall customer experience.
+\end{document}
+
+
