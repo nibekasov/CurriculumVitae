@@ -61,3 +61,20 @@ fig.add_tools(LassoSelectTool())
 # Generate HTML file and display plot
 output_file(filename="points_vs_field_goal_perc.html")
 show(fig)
+
+
+# Add additional marker to graphs
+# Import ColumnDataSource
+from bokeh.models import ColumnDataSource
+
+# Create source
+source = ColumnDataSource(data=nba)
+
+# Create TOOLTIPS and add to figure
+TOOLTIPS = [("Name", "@player"), ("Position", "@position"), ("Team", "@team")]
+fig = figure(x_axis_label="Assists", y_axis_label="Steals", tooltips=TOOLTIPS)
+
+# Add circle glyphs
+fig.circle(x="assists", y="steals", source=source)
+output_file(filename="first_tooltips.html")
+show(fig)
