@@ -1,7 +1,8 @@
 # CurriculumVitae
 My resume & solution of algorithmic problems
+Solutions of assigments included to show my capability in solving such testing tasks 
 
-Other projects could be found at other folders 
-Some certificates are also inculded
+More complex projects could be found at other folders 
 
-Mostly for me to have up to date information about my achivments and have example of resume near at hand
+My resume also schould be hear(and be current) 
+Moreover some of my certificates stored hear as if it could be stored in DropBox
