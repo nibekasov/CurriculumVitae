@@ -78,3 +78,17 @@ fig = figure(x_axis_label="Assists", y_axis_label="Steals", tooltips=TOOLTIPS)
 fig.circle(x="assists", y="steals", source=source)
 output_file(filename="first_tooltips.html")
 show(fig)
+
+
+# Create TOOLTIPS
+TOOLTIPS = [("Name", "@player"), 
+            ("Conference", "@conference"), 
+            ("Field Goal %", "@field_goal_perc{0.2f}")]
+
+# Add TOOLTIPS to figure
+fig = figure(x_axis_label="Minutes", y_axis_label="Points", tooltips=TOOLTIPS)
+
+# Add circle glyphs
+fig.circle(x="minutes", y="points", source=source)
+output_file(filename="formatted_hovertool.html")
+show(fig)
