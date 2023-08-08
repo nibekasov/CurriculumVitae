@@ -43,3 +43,17 @@ fig.vbar(x=positions["position"], top=positions["three_point_perc"])
 # Produce the html file and display the plot
 output_file(filename="3p_fg_by_position.html")
 show(fig)
+
+
+# Create a list of tools
+tools = ['poly_select', 'wheel_zoom', 'reset', 'save']
+
+# Create figure and set tools
+fig = figure(x_axis_label="Field Goal (%)", y_axis_label="Points per Game", tools=tools)
+
+# Add circle glyphs
+fig.circle(x=nba["field_goal_perc"], y=nba["points"])
+
+# Generate HTML file and display plot
+output_file(filename="points_vs_field_goal_perc.html")
+show(fig)
