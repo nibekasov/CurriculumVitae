@@ -57,3 +57,17 @@ fig.circle(x=nba["field_goal_perc"], y=nba["points"])
 # Generate HTML file and display plot
 output_file(filename="points_vs_field_goal_perc.html")
 show(fig)
+
+
+tools = ['poly_select', 'wheel_zoom', 'reset', 'save']
+
+# Import LassoSelectTool
+from bokeh.models import LassoSelectTool
+
+fig = figure(x_axis_label="Field Goal (%)", y_axis_label="Points per Game", tools=tools)
+fig.circle(x=nba["field_goal_perc"], y=nba["points"])
+
+# Update the figure to include LassoSelectTool
+fig.add_tools(LassoSelectTool())
+output_file(filename="updated_plot_with_lasso_select.html")
+show(fig)
