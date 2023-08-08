@@ -29,3 +29,17 @@ output_file(filname="Kevin_Durant_preformance.html")
 
 # Display plot
 show(fig)
+
+
+# Calculate average three point field goal percentage by position
+positions = nba.groupby("position", as_index=False)["three_point_perc"].mean()
+
+# Instantiate figure
+fig = figure(x_axis_label="Position", y_axis_label="3 Point Field Goal (%)", x_range=positions["position"]) 
+
+# Add bars
+fig.vbar(x=positions["position"], top=positions["three_point_perc"])
+
+# Produce the html file and display the plot
+output_file(filename="3p_fg_by_position.html")
+show(fig)
